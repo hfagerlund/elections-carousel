@@ -3,7 +3,7 @@ Carousel presentation of data from a JSON election results feed.
 
 Enables scrolling through the election results for all ridings using the Next and Back buttons, displaying the number of votes and percentage of the vote won by each candidate in each riding.
 
-![screenshot of elections-carousel page](https://github.com/hfagerlund/elections-carousel/screenshots/screenshot_elections-html.png)
+![screenshot of elections-carousel page](https://github.com/hfagerlund/elections-carousel/tree/master/screenshots/screenshot_elections-html.png)
 
 - - -
 ## Installation
@@ -56,7 +56,7 @@ from inside the directory where you extracted the **elections-carousel** project
 (All copyrights for the above remain with their respective owners.)
 - - -
 ### Configuration
-* Replace the URL in [election.js](https://github.com/hfagerlund/elections-carousel/js/elections/election.js) with `http://<path-to-json-feed-election-results.js>` so that it resembles:
+* Replace the URL in [election.js](https://github.com/hfagerlund/elections-carousel/blob/master/elections-carousel/js/elections/election.js) with `http://<path-to-json-feed-election-results.js>` so that it resembles:
 ```
 var url = 'http://somehost/somedir/results.js';
 ```
@@ -110,7 +110,7 @@ $ grunt test
 - - -
 ## License
 Copyright (c) 2015 Heini Fagerlund. Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
-(See [LICENSE](http://github.com/hfagerlund/elections-carousel/LICENSE).)
+(See [LICENSE](https://github.com/hfagerlund/elections-carousel/blob/master/LICENSE).)
 
 - - -
 ## Changelog
