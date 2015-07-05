@@ -114,4 +114,5 @@ Copyright (c) 2015 Heini Fagerlund. Licensed under the [MIT license](http://open
 
 - - -
 ## Changelog
+* 0.1.1 - July 5, 2015. Enhanced button states.
 * 0.1.0 - July 5, 2015. Initial version.
