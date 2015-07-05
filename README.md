@@ -3,7 +3,7 @@ Carousel presentation of data from a JSON election results feed.
 
 Enables scrolling through the election results for all ridings using the Next and Back buttons, displaying the number of votes and percentage of the vote won by each candidate in each riding.
 
-![screenshot of elections-carousel page](https://github.com/hfagerlund/elections-carousel/tree/master/screenshots/screenshot_elections-html.png)
+![screenshot of elections-carousel page](https://github.com/hfagerlund/elections-carousel/blob/master/screenshots/screenshot_elections-html.png)
 
 - - -
 ## Installation
