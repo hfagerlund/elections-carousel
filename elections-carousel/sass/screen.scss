@@ -1,0 +1,53 @@
+/*!
+ * elections-carousel
+ * @copyright (c) 2015 Heini Fagerlund
+ * @version 0.1.0
+ * @license MIT
+ */
+
+/*
+@import "compass/reset";
+@import "compass/typography/links/link-colors";
+*/
+
+@import "mixins";
+
+@import "layout";
+@import "color";
+@import "typography";
+/* @import "media-queries.scss"; */
+
+body{font-family:verdana,arial,sans-serif;font-size:1em}
+
+h1,h2{margin:0 0 0.5em 0}
+hr{border:0;border-top:1px solid #ccc}
+
+.riding__candidate{
+ font-weight:bold;
+ list-style-type:none;
+ padding:0.5em 1em;
+}
+
+.riding_winner{
+ border-bottom:2px solid $black;
+ @include boxshadow($black);
+}
+
+.riding_winner:before{
+ color:$white;
+ content:" ** elected ** ";
+ text-transform:uppercase
+}
+
+/* CSS3 animations */
+.btn:active{
+animation-duration:0.5s;
+animation-name:press;
+animation-iteration-count:1;
+/*animation-direction:right*/
+}
+
+@keyframes press{
+0%{padding:0;@include insetboxshadow($black);}
+100%{padding:10px}
+}

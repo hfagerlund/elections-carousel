@@ -1,0 +1,47 @@
+$ridingWidth:500px;
+
+#eResults { 
+  border:1px solid #999; 
+  width: $ridingWidth;
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#wrapper { 
+  position: absolute;
+  width: 50000px;
+}
+
+.riding {
+ max-width:$ridingWidth;
+}
+
+.riding__candidate {
+ min-height:2em;
+}
+
+.btn {
+ background-color:#99cedb;
+ @include btnsize(50px);
+ color:#000;
+ display:inline-block;
+ font-size:2em;
+ font-weight:bold;
+ line-height:1.5;
+ margin:350px 0 0 100px;
+ outline:0;
+ position:static;
+ text-align:center;
+ text-decoration:none;
+ vertical-align:middle;
+ z-index:20000;
+}
+.btn--back{
+ float:left;
+ margin-left:100px
+}
+.btn--next{
+ float:right;
+ margin-right:120px
+}

@@ -1,0 +1,16 @@
+@import "carousel";
+
+a {padding:0.2em}
+
+.riding {
+ display:inline-table;
+ margin:0 0 1em 0;
+ padding:1em 0 0 0;
+ h2, .riding__totalVotes {
+  margin-left:1em;
+ }
+}
+
+.riding__list {
+ padding:0;
+}

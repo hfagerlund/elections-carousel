@@ -1,0 +1,36 @@
+$black:#000;
+$white:#fff;
+
+$color_party-lib_red:#f00;
+$color_party-pc_blue:#141f7f;
+$color_party-ndp_orange:#ed5300; 
+$color_party-grn_green:#11681d;
+$color_party-other_grey:#ccc;
+
+/* party colours */
+.riding {
+  background-color:transparent;
+
+  @at-root #{&}__candidate {
+    color:$black;
+    background-color:$color_party-other_grey;
+
+    @at-root #{&}_lib {
+       color:$white;
+       background-color:$color_party-lib_red;
+    }
+    @at-root #{&}_pc {
+       color:$white;
+       background-color:$color_party-pc_blue;
+    }
+    @at-root #{&}_ndp {
+       color:#fdfdfd;
+       background-color:$color_party-ndp_orange;
+    }
+    @at-root #{&}_grn {
+       color:$white;
+       background-color:$color_party-grn_green;
+    }
+  }
+  
+}
