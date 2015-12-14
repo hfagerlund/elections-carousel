@@ -1,0 +1,23 @@
+{
+  "name": "elections-carousel",
+  "description": "Carousel presentation of data from a JSON election results feed",
+  "main": "elections-carousel/elections.html",
+  "authors": [
+    "Heini Fagerlund"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hfagerlund/elections-carousel",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "elections-carousel/"
+  ],
+  "dependencies": {
+    "jquery": "2.1.1"
+  }
+}

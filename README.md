@@ -8,7 +8,7 @@ Enables scrolling through the election results for all ridings using the Next an
 - - -
 ## Installation
 ### Download:
-Download the **elections-carousel** project in .zip format, or clone the repository at [https://github.com/hfagerlund/elections-carousel/](https://github.com/hfagerlund/elections-carousel/).
+Download the **elections-carousel** project in [.zip format](https://github.com/hfagerlund/elections-carousel/archive/master.zip), or clone the repository using `$ git clone https://github.com/hfagerlund/elections-carousel.git`.
 
 Then run:
 ```
@@ -16,13 +16,18 @@ $ npm install
 ```
 from inside the directory where you extracted the **elections-carousel** project (ie. in the same directory where package.json is located).
 
+Required [dependencies](https://github.com/hfagerlund/elections-carousel#requirements) can be installed using:
+```
+$ bower install
+```
+
 #### File structure:
 ```
 |-elections-carousel
+|---bower_components
 |---build
 |---js
 |-----elections
-|-----third-party
 |---sass
 |---stylesheets
 |-json_feed
@@ -33,9 +38,9 @@ from inside the directory where you extracted the **elections-carousel** project
 | Directory:  | Contains: |
 | ------------- | ------------- |
 | **/elections-carousel**  | all of project source code (ie. the project root)  |
+| **/elections-carousel/bower_components/**  | required libraries - eg. local (minified) version of jQuery)  |
 | **/elections-carousel/build** | minified version of the combined elections scripts  |
 | **/elections-carousel/js/elections**  | unminified versions of all the elections scripts  |
-| **/elections-carousel/js/third-party**  | required libraries - eg. local (minified) version of jQuery)  |
 | **/elections-carousel/sass**  | SASS (.scss) files |
 | **/elections-carousel/stylesheets**  | compiled CSS (.css) files |
 | **/json_feed**  | local version of the JSON election results feed  |
@@ -48,8 +53,8 @@ from inside the directory where you extracted the **elections-carousel** project
 - Compass
 - SASS
 - npm
+- Bower
 - Ruby
-- ~~Bower~~
 - QUnit
 - jQuery
 
@@ -83,6 +88,7 @@ where `<path-to-project-root>` is replaced with the path to your **elections-car
 making the appropriate modification to `<path-to-your-page>`.
 
 * **HTML**: All that is required to use the **elections-carousel** component on a page is an element in the markup with the `id` attribute value of `eResults`:
+
 ##### Example:
 ```html
 <div id="eResults">
