@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 uglify: { 
 		    my_scripts: {
                       files: {
-                        'elections-carousel/build/election.all.min.js': ['elections-carousel/js/elections/election.js', 'elections-carousel/js/elections/btnClick.js', 'elections-carousel/js/elections/rotateCarousel.js', 'elections-carousel/js/elections/initializeCarousel.js']
+                        'elections-carousel/build/election.all.min.js': ['elections-carousel/js/elections/elections.js']
                       }
                     }
                 },

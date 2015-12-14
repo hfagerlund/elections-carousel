@@ -1,7 +1,7 @@
 /*!
  * elections-carousel
  * @copyright (c) 2015 Heini Fagerlund
- * @version 0.1.1
+ * @version 0.2.0
  * @license MIT
  */
 var url = 'http://path-to-json-feed-election-results.js'; // REPLACE URL
