@@ -120,9 +120,10 @@ Copyright (c) 2015 Heini Fagerlund. Licensed under the [MIT license](http://open
 
 - - -
 ## Changelog
+* 0.2.1 - December 14, 2015. Deprecated code removal.
 * 0.2.0 - December 14, 2015.
  * refactored code, performance improvements
-  * defined  global, read-only variables (JSHint strict mode)
+ * defined  global, read-only variables (JSHint strict mode)
  * fixed button (enabled/disabled) state bugs
  * improved vote percentages (to 2 decimal places; totals 100%)
  * accessibility enhancement: 'Elected' text rendering
