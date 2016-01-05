@@ -41,3 +41,14 @@ test( "verify location of buttons relative to wrapper", function( assert ) {
     equal((new RegExp(backBtnPath)).test('a[contains(@class,"btn--back")'), true, "Back button was found as a child of the wrapper div");
     equal((new RegExp(nextBtnPath)).test('a[contains(@class,"btn--next")'), true, "Next button was found as a child of the wrapper div");
 });
+
+test("verify that correct riding cards are displayed when buttons are clicked", function() {
+    var positionAfterFirstClickNext = BoD.btnClick('btnNext','click');
+    equal(positionAfterFirstClickNext,-500,'2nd (Antigonish) riding card is visible after Next button is clicked'); 
+    var positionAfterSecondClickNext = BoD.btnClick('btnNext','click');
+    equal(positionAfterSecondClickNext,-1000,'3rd (Argyle-Barrington) riding card is visible after Next button is clicked again (twice)'); 
+
+    var positionAfterFirstClickBack = BoD.btnClick('btnBack','click');
+    var positionAfterSecondClickBack = BoD.btnClick('btnBack','click');
+    equal(positionAfterSecondClickBack,0,'1st (Annapolis) riding card is visible after Back button is clicked twice'); 
+});

@@ -89,6 +89,8 @@ function btnClick(btnName,evtTarget){
     } else if(btnName == 'btnNext') {
         numOfClicksFwd = 0; 
     }
+
+    return newPosnOfWrapper;
 }
 window.BoD.btnClick = btnClick;
 
