@@ -1,7 +1,7 @@
 /*!
  * elections-carousel
- * @copyright (c) 2015 Heini Fagerlund
- * @version 0.2.1
+ * @copyright (c) Heini Fagerlund
+ * @version 0.3.1
  * @license MIT
  */
 
@@ -155,6 +155,9 @@ function createResultsListFunc(json) {
 	    var totalVotesForRiding = BoD.calcTotalVotesForRiding(result);
 	    jQuery('#art_' + articleID).children('.riding__totalVotes').children('strong').append(totalVotesForRiding);
 
+        var candidates = [];
+        var candidatesByVotes = [];
+
         for (var i in result) {
             var candidateStats = { 
 		        name : result[i].name,
@@ -165,11 +168,22 @@ function createResultsListFunc(json) {
 		    };
                     
 		    var percentageVotes = BoD.roundToTwoDec((candidateStats.votes/totalVotesForRiding)*100); //round to 2 decimal places
-		    var winner = candidateStats.isElected?' riding_winner':'';
+		    candidateStats.percentageVotes = percentageVotes;
 		    var ridingCard = jQuery('#art_' + articleID);
 		    var candidateList = ridingCard.children("ol");
-		    candidateList.append('<li class=\"riding__candidate riding__candidate_' + candidateStats.partyCode.toLowerCase()  + winner + '\"><span class="cap">' + candidateStats.partyCode.toLowerCase() + '</span> Candidate ' + candidateStats.name + ' won ' + candidateStats.votes + ' votes (' + percentageVotes + '% of the vote)</li>');
+
+            candidates.push(candidateStats);
         }
+
+        candidatesByVotes.push(candidates.sort(function(a, b){return b.votes-a.votes})); //descending order
+        for (var i in candidatesByVotes) {
+		for (var j in candidatesByVotes[i]) {
+			var candidate = candidatesByVotes[i][j];
+			var winner = candidate.isElected?' riding_winner':'';
+			candidateList.append('<li class=\"riding__candidate riding__candidate_' + candidate.partyCode.toLowerCase()  + winner + '\"><span class="cap">' + candidate.partyCode.toLowerCase() + '</span> Candidate ' + candidate.name + ' won ' + candidate.votes + ' votes (' + candidate.percentageVotes + '% of the vote)</li>');
+		}
+        }
+
     });
 var ridingWinner = jQuery('.riding_winner');
 ridingWinner.prepend("Elected ");
