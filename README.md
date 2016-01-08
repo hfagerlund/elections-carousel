@@ -115,11 +115,12 @@ $ grunt test
 ```
 - - -
 ## License
-Copyright (c) 2015 Heini Fagerlund. Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
+Copyright (c) Heini Fagerlund. Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
 (See [LICENSE](https://github.com/hfagerlund/elections-carousel/blob/master/LICENSE).)
 
 - - -
 ## Changelog
+* 0.3.1 - January 7, 2016. Results listed in descending numeric order (reordered).
 * 0.2.1 - December 14, 2015. Deprecated code removal.
 * 0.2.0 - December 14, 2015.
  * refactored code, performance improvements
