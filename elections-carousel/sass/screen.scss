@@ -1,7 +1,7 @@
 /*!
  * elections-carousel
  * @copyright (c) Heini Fagerlund
- * @version 0.3.1
+ * @version 0.3.0
  * @license MIT
  */
 

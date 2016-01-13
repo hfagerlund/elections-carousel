@@ -120,7 +120,7 @@ Copyright (c) Heini Fagerlund. Licensed under the [MIT license](http://opensourc
 
 - - -
 ## Changelog
-* 0.3.1 - January 7, 2016. Results listed in descending numeric order (reordered).
+* 0.3.0 - January 13, 2016. Results listed in descending numeric order (reordered).
 * 0.2.1 - December 14, 2015. Deprecated code removal.
 * 0.2.0 - December 14, 2015.
  * refactored code, performance improvements
