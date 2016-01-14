@@ -3,8 +3,9 @@ $ridingWidth:500px;
 #eResults { 
   border:1px solid #999; 
   width: $ridingWidth;
-  min-height: 300px;
+  min-height: 550px;
   overflow: hidden;
+  padding-bottom:2em;
   position: relative;
 }
 
@@ -14,11 +15,11 @@ $ridingWidth:500px;
 }
 
 .riding {
- max-width:$ridingWidth;
+ width:$ridingWidth;
 }
 
 .riding__candidate {
- min-height:2em;
+ min-height:1em;
 }
 
 .btn {
@@ -29,7 +30,7 @@ $ridingWidth:500px;
  font-size:2em;
  font-weight:bold;
  line-height:1.5;
- margin:350px 0 0 100px;
+ margin:500px 0 0 100px;
  outline:0;
  position:static;
  text-align:center;

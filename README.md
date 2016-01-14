@@ -28,6 +28,7 @@ $ bower install
 |---build
 |---js
 |-----elections
+|-----vendors
 |---sass
 |---stylesheets
 |-json_feed
@@ -41,6 +42,7 @@ $ bower install
 | **/elections-carousel/bower_components/**  | required libraries - eg. local (minified) version of jQuery)  |
 | **/elections-carousel/build** | minified version of the combined elections scripts  |
 | **/elections-carousel/js/elections**  | unminified versions of all the elections scripts  |
+| **/elections-carousel/js/vendors**  | third-party scripts - eg. Google fonts |
 | **/elections-carousel/sass**  | SASS (.scss) files |
 | **/elections-carousel/stylesheets**  | compiled CSS (.css) files |
 | **/json_feed**  | local version of the JSON election results feed  |
@@ -120,6 +122,7 @@ Copyright (c) Heini Fagerlund. Licensed under the [MIT license](http://opensourc
 
 - - -
 ## Changelog
+* 0.4.0 - January 13, 2016. New look-and-feel (GUI improvements).
 * 0.3.0 - January 13, 2016. Results listed in descending numeric order (reordered).
 * 0.2.1 - December 14, 2015. Deprecated code removal.
 * 0.2.0 - December 14, 2015.

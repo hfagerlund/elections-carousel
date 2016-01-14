@@ -1,5 +1,5 @@
 @mixin boxshadow($color){
-	box-shadow: 0px -3px 3px 0px $color
+	box-shadow:0 -5px 2px 0 $color
 }
 
 @mixin insetboxshadow($color){

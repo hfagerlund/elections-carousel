@@ -1,7 +1,7 @@
 /*!
  * elections-carousel
  * @copyright (c) Heini Fagerlund
- * @version 0.3.0
+ * @version 0.4.0
  * @license MIT
  */
 
@@ -17,7 +17,7 @@
 @import "typography";
 /* @import "media-queries.scss"; */
 
-body{font-family:verdana,arial,sans-serif;font-size:1em}
+#eResults{font-family:'Noto Sans',verdana,arial,sans-serif;font-size:1em}
 
 h1,h2{margin:0 0 0.5em 0}
 hr{border:0;border-top:1px solid #ccc}
@@ -25,12 +25,7 @@ hr{border:0;border-top:1px solid #ccc}
 .riding__candidate{
  font-weight:bold;
  list-style-type:none;
- padding:0.5em 1em;
-}
-
-.riding_winner{
- border-bottom:2px solid $black;
- @include boxshadow($black);
+ padding:0.3em 1em;
 }
 
 /* CSS3 animations */
