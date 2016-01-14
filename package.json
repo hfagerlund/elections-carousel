@@ -1,6 +1,6 @@
 {
   "name": "elections-carousel",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Carousel presentation of data from a JSON election results feed",
   "devDependencies": {
     "grunt": "^0.4.5",

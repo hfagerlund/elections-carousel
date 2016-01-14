@@ -1,7 +1,7 @@
 /*!
  * elections-carousel
  * @copyright (c) Heini Fagerlund
- * @version 0.3.0
+ * @version 0.4.0
  * @license MIT
  */
 
@@ -175,17 +175,25 @@ function createResultsListFunc(json) {
             candidates.push(candidateStats);
         }
 
-        candidatesByVotes.push(candidates.sort(function(a, b){return b.votes-a.votes})); //descending order
-        for (var i in candidatesByVotes) {
-		for (var j in candidatesByVotes[i]) {
-			var candidate = candidatesByVotes[i][j];
+        candidatesByVotes.push(candidates.sort(function(a, b){return b.votes-a.votes;})); //descending order
+        for (var j in candidatesByVotes) {
+		for (var k in candidatesByVotes[j]) {
+			var candidate = candidatesByVotes[j][k];
 			var winner = candidate.isElected?' riding_winner':'';
-			candidateList.append('<li class=\"riding__candidate riding__candidate_' + candidate.partyCode.toLowerCase()  + winner + '\"><span class="cap">' + candidate.partyCode.toLowerCase() + '</span> Candidate ' + candidate.name + ' won ' + candidate.votes + ' votes (' + candidate.percentageVotes + '% of the vote)</li>');
+                        //create bars
+	                 var mainStyle = document.styleSheets[0];
+                        var oLength = mainStyle.cssRules.length;
+                        var barHeight = 250*(candidate.percentageVotes/100);
+                        mainStyle.insertRule('#art_' + articleID + ' .riding__candidate_' + candidate.partyCode.toLowerCase() + '{height:' + barHeight +'px!important;position:relative}', oLength);
+			 jQuery('#art_' + articleID).children("ol").append('<li class=\"riding__candidate riding__candidate_' + candidate.partyCode.toLowerCase()  + winner + '\"><span class="percentage"><span class="cap">' + candidate.partyCode.toLowerCase() + '</span> ' + candidate.percentageVotes + '%</span></li>');
+                        //names and number of votes
+                        var ifElected = candidate.isElected ? ' was elected with ' : ' won ';
+			 var finalSum = jQuery('#art_' + articleID).children('.riding__totalVotes');
+			 finalSum.before('<p class="pointForm"><span class="label cap riding__candidate_' + candidate.partyCode.toLowerCase()  + winner +'"> ' + candidate.partyCode.toLowerCase() + ' </span> ' + candidate.name + ifElected + candidate.votes + ' votes</p>' );
 		}
         }
-
     });
-var ridingWinner = jQuery('.riding_winner');
+var ridingWinner = jQuery('.riding__list .riding_winner');
 ridingWinner.prepend("Elected ");
 } 
 window.BoD.createResultsListFunc = createResultsListFunc;

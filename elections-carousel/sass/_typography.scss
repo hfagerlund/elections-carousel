@@ -1,7 +1,12 @@
 .cap{text-transform:uppercase}
+.label{font-weight:bold}
+.pointForm:before{content:"• "}
 .riding {
   h2 {
     font-size:1.4em;
     font-weight:bold;
   }
+}
+.riding__list, .riding__totalVotes {
+ text-align:center
 }

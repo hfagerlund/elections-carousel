@@ -2,15 +2,44 @@
 
 a {padding:0.2em}
 
+.label {
+ margin-right:0.25em
+}
+
+.percentage {
+ position:absolute;
+ bottom:0;
+ left:20px;
+ z-index:20
+}
+
+.pointForm{
+ margin-left:3em
+}
+
 .riding {
  display:inline-table;
  margin:0 0 1em 0;
  padding:1em 0 0 0;
- h2, .riding__totalVotes {
+ h2 {
   margin-left:1em;
  }
 }
 
+.riding__candidate{
+ display:inline-table;
+ margin:0;
+ padding:0;
+ vertical-align:bottom;
+ width:80px
+}
+
 .riding__list {
  padding:0;
+}
+
+.riding__totalVotes{
+ margin:0;
+ padding:1em 0;
+ width:500px
 }
