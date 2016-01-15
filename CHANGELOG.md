@@ -57,6 +57,7 @@
 ## 0.1.0 - 2015-07-05 
 #### New features:
 * Initial version
+
 - - -
 #### *Notes*: 
 * All dates shown in YYYY-MM-DD format
