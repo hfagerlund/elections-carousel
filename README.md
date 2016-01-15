@@ -3,7 +3,7 @@ Carousel presentation of data from a JSON election results feed.
 
 Enables scrolling through the election results for all ridings using the Next and Back buttons, displaying the number of votes and percentage of the vote won by each candidate in each riding.
 
-![screenshot of elections-carousel page](https://github.com/hfagerlund/elections-carousel/blob/master/screenshots/screenshot_elections-html.png)
+<img style="max-width:100%;" alt="screenshot of elections-carousel page" src="/screenshots/screenshot_elections-html.png" align="left" />
 
 - - -
 ## Installation
@@ -119,18 +119,3 @@ $ grunt test
 ## License
 Copyright (c) Heini Fagerlund. Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
 (See [LICENSE](https://github.com/hfagerlund/elections-carousel/blob/master/LICENSE).)
-
-- - -
-## Changelog
-* 0.4.0 - January 13, 2016. New look-and-feel (GUI improvements).
-* 0.3.0 - January 13, 2016. Results listed in descending numeric order (reordered).
-* 0.2.1 - December 14, 2015. Deprecated code removal.
-* 0.2.0 - December 14, 2015.
- * refactored code, performance improvements
- * defined  global, read-only variables (JSHint strict mode)
- * fixed button (enabled/disabled) state bugs
- * improved vote percentages (to 2 decimal places; totals 100%)
- * accessibility enhancement: 'Elected' text rendering
- * automated package management
-* 0.1.1 - July 5, 2015. Enhanced button states.
-* 0.1.0 - July 5, 2015. Initial version.
