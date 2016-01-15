@@ -5,7 +5,6 @@ Enables scrolling through the election results for all ridings using the Next an
 
 <img style="max-width:100%;" alt="screenshot of elections-carousel page" src="/screenshots/screenshot_elections-html.png" align="left" />
 
-- - -
 ## Installation
 ### Download:
 Download the **elections-carousel** project in [.zip format](https://github.com/hfagerlund/elections-carousel/archive/master.zip), or clone the repository using `$ git clone https://github.com/hfagerlund/elections-carousel.git`.
