@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     },
 
                     tests: { 
-                        src: 'test/**/**.js'
+                        src: 'test/tests.js'
                     }
                 },
                 uglify: { 
@@ -70,6 +70,7 @@ module.exports = function(grunt) {
         grunt.registerTask('cssminify',['cssmin']);
         grunt.registerTask('jsmin',['clean:js','uglify']);
         grunt.registerTask('styles',['clean:css','watch','cssmin']);
+        grunt.registerTask('travis', ['jshint','qunit']);
         grunt.registerTask('dev',['clean','watch','cssmin','jshint','uglify']);
         grunt.registerTask('prod',['cssmin:production','uglify']); 
 };
