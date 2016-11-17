@@ -214,7 +214,7 @@ window.BoD.initializeCarousel = initializeCarousel;
 
 jQuery('html').addClass('js'); //avoid FOUC
 
-var url = 'http://path-to-json-feed-election-results.js'; // REPLACE URL
+var url = 'http://localhost:8080/results.js'; // local URL (Node HTTP server running)
 jQuery.ajax({
    type: 'GET',
    url: url, 
