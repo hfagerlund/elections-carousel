@@ -1,4 +1,7 @@
 # elections-carousel
+
+[![Build Status](https://travis-ci.org/hfagerlund/elections-carousel.svg?branch=master)](https://travis-ci.org/hfagerlund/elections-carousel)
+
 Carousel presentation of data from a JSON election results feed.
 
 Enables scrolling through the election results for all ridings using the Next and Back buttons, displaying the number of votes and percentage of the vote won by each candidate in each riding.
@@ -62,7 +65,7 @@ $ bower install
 (All copyrights for the above remain with their respective owners.)
 - - -
 ### Configuration
-* Replace the URL in [election.js](https://github.com/hfagerlund/elections-carousel/blob/master/elections-carousel/js/elections/election.js) with `http://<path-to-json-feed-election-results.js>` so that it resembles:
+* Replace the URL in [election.js](https://github.com/hfagerlund/elections-carousel/blob/master/elections-carousel/js/elections/elections.js#L217) with `http://<path-to-json-feed-election-results.js>` so that it resembles:
 ```
 var url = 'http://somehost/somedir/results.js';
 ```
