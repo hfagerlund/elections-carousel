@@ -65,7 +65,7 @@ $ bower install
 (All copyrights for the above remain with their respective owners.)
 - - -
 ### Configuration
-* Replace the URL in [election.js](https://github.com/hfagerlund/elections-carousel/blob/master/elections-carousel/js/elections/elections.js#L217) with `http://<path-to-json-feed-election-results.js>` so that it resembles:
+* Replace the URL in [elections.js](https://github.com/hfagerlund/elections-carousel/blob/master/elections-carousel/js/elections/elections.js#L217) with `http://<path-to-json-feed-election-results.js>` so that it resembles:
 ```
 var url = 'http://somehost/somedir/results.js';
 ```
