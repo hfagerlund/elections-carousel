@@ -8,4 +8,4 @@ install:
   - npm install -g http-server
 before_script:
   - cd json_feed
-  - http-server
+  - http-server &
