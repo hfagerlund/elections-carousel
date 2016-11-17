@@ -4,4 +4,8 @@ node_js:
 before_install: npm install -g grunt-cli
 install:
   - npm install
+  - npm install -g http-server
+before_script:
   - bower install
+  - cd json_feed
+  - http-server
