@@ -9,3 +9,4 @@ install:
 before_script:
   - cd json_feed
   - http-server &
+script: grunt travis
