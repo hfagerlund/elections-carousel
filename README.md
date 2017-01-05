@@ -12,21 +12,15 @@ Enables scrolling through the election results for all ridings using the Next an
 ### Download:
 Download the **elections-carousel** project in [.zip format](https://github.com/hfagerlund/elections-carousel/archive/master.zip), or clone the repository using `$ git clone https://github.com/hfagerlund/elections-carousel.git`.
 
-Then run:
+Install all required [dependencies](https://github.com/hfagerlund/elections-carousel#requirements) by running:
 ```
 $ npm install
 ```
 from inside the directory where you extracted the **elections-carousel** project (ie. in the same directory where package.json is located).
 
-Required [dependencies](https://github.com/hfagerlund/elections-carousel#requirements) can be installed using:
-```
-$ bower install
-```
-
 #### File structure:
 ```
 |-elections-carousel
-|---bower_components
 |---build
 |---js
 |-----elections
@@ -41,7 +35,6 @@ $ bower install
 | Directory:  | Contains: |
 | ------------- | ------------- |
 | **/elections-carousel**  | all of project source code (ie. the project root)  |
-| **/elections-carousel/bower_components/**  | required libraries - eg. local (minified) version of jQuery)  |
 | **/elections-carousel/build** | minified version of the combined elections scripts  |
 | **/elections-carousel/js/elections**  | unminified versions of all the elections scripts  |
 | **/elections-carousel/js/vendors**  | third-party scripts - eg. Google fonts |
@@ -57,7 +50,6 @@ $ bower install
 - Compass
 - SASS
 - npm
-- Bower
 - Ruby
 - QUnit
 - jQuery
