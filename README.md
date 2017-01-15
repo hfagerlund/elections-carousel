@@ -23,7 +23,9 @@ Enables scrolling through the election results for all ridings using the Next an
   * [In the browser](https://github.com/hfagerlund/elections-carousel#in-the-browser)
   * [On the command line](https://github.com/hfagerlund/elections-carousel#command-line)
 * [License](https://github.com/hfagerlund/elections-carousel#license)
+
 ---
+
 ### Other:
 * [Changelog](https://github.com/hfagerlund/elections-carousel/blob/master/CHANGELOG.md)
 * [Releases](https://github.com/hfagerlund/elections-carousel/releases)
