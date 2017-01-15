@@ -7,7 +7,7 @@ Carousel presentation of data from a JSON feed of election results.
 Enables scrolling through the election results for all ridings using the Next and Back buttons, displaying the number of votes and percentage of the vote won by each candidate in each riding.
 
 <img style="max-width:100%;" alt="screenshot of elections-carousel page" src="/screenshots/screenshot_elections-html.png" align="center" /><br />
-***Figure 1**: screenshot of elections.html page*
+*Figure 1: screenshot of elections.html page*
 
 - - -
 
@@ -131,6 +131,12 @@ An example page is provided (at **/another-page_example.html**) showing the **el
 (_NOTE_: The **elections-carousel** module requires that jQuery is being used on your page.)
 - - -
 ## Running the Unit Tests
+
+Prior to running the tests, run the following (from the root directory) to launch a local server for the JSON feed data:
+```
+$ cd json_feed
+$ http-server
+```
 
 #### In the browser:
 Read the QUnit test results in the browser at URL:
