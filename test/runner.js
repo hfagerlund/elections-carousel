@@ -1,4 +1,4 @@
 runner.run({
-  code : './elections-carousel/js/elections/*.js', 
+  code : '../src/js/elections/*.js', 
   tests : './test/tests.js' 
 });
