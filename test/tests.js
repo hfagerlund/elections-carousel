@@ -1,14 +1,14 @@
-module( "setup and teardown", {
-setup: function() {
+QUnit.module( "setup and teardown", {
+beforeEach: function() {
 	assert.ok( true, "one extra assert per test" );
-}, teardown: function() {
+}, afterEach: function() {
 	assert.ok( true, "and one extra assert after each test" );
 }
 });
 
-module("UI tests");
+QUnit.module("UI tests");
 
-test( "verify that required elements exist", function( assert ) {
+QUnit.test( "verify that required elements exist", function( assert ) {
     var main = $("#eResults");
     var wrapper = $("#wrapper");
     var btns = $(".btn");
@@ -29,26 +29,26 @@ test( "verify that required elements exist", function( assert ) {
     assert.equal( ridings.length, 10, "correct number of ridings (ten) found" );
 });
 
-test( "verify location of wrapper div relative to main element", function( assert ) {
+QUnit.test( "verify location of wrapper div relative to main element", function( assert ) {
     var wrapperDiv = document.evaluate("/html/body/main/div", document, null, XPathResult.ANY_TYPE, null);
-    equal((new RegExp(wrapperDiv)).test('//*[@id="wrapper"]'), true, "wrapper div is located inside main element");
+    assert.equal((new RegExp(wrapperDiv)).test('//*[@id="wrapper"]'), true, "wrapper div is located inside main element");
 });
 
 
-test( "verify location of buttons relative to wrapper", function( assert ) {
+QUnit.test( "verify location of buttons relative to wrapper", function( assert ) {
     var backBtnPath = document.evaluate("/html/body/main/wrapper/a[1]", document, null, XPathResult.ANY_TYPE, null);
     var nextBtnPath = document.evaluate("/html/body/main/wrapper/a[2]", document, null, XPathResult.ANY_TYPE, null);
-    equal((new RegExp(backBtnPath)).test('a[contains(@class,"btn--back")'), true, "Back button was found as a child of the wrapper div");
-    equal((new RegExp(nextBtnPath)).test('a[contains(@class,"btn--next")'), true, "Next button was found as a child of the wrapper div");
+    assert.equal((new RegExp(backBtnPath)).test('a[contains(@class,"btn--back")'), true, "Back button was found as a child of the wrapper div");
+    assert.equal((new RegExp(nextBtnPath)).test('a[contains(@class,"btn--next")'), true, "Next button was found as a child of the wrapper div");
 });
 
-test("verify that correct riding cards are displayed when buttons are clicked", function() {
+QUnit.test("verify that correct riding cards are displayed when buttons are clicked", function( assert ) {
     var positionAfterFirstClickNext = BoD.btnClick('btnNext','click');
-    equal(positionAfterFirstClickNext,-500,'2nd (Antigonish) riding card is visible after Next button is clicked'); 
+    assert.equal(positionAfterFirstClickNext,-500,'2nd (Antigonish) riding card is visible after Next button is clicked'); 
     var positionAfterSecondClickNext = BoD.btnClick('btnNext','click');
-    equal(positionAfterSecondClickNext,-1000,'3rd (Argyle-Barrington) riding card is visible after Next button is clicked again (twice)'); 
+    assert.equal(positionAfterSecondClickNext,-1000,'3rd (Argyle-Barrington) riding card is visible after Next button is clicked again (twice)'); 
 
     var positionAfterFirstClickBack = BoD.btnClick('btnBack','click');
     var positionAfterSecondClickBack = BoD.btnClick('btnBack','click');
-    equal(positionAfterSecondClickBack,0,'1st (Annapolis) riding card is visible after Back button is clicked twice'); 
+    assert.equal(positionAfterSecondClickBack,0,'1st (Annapolis) riding card is visible after Back button is clicked twice'); 
 });

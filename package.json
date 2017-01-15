@@ -1,24 +1,35 @@
 {
   "name": "elections-carousel",
-  "version": "0.4.0",
-  "description": "Carousel presentation of data from a JSON election results feed",
+  "version": "1.0.0",
+  "description": "Carousel presentation of data from a JSON feed of election results",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-compass": "^1.0.3",
-    "grunt-contrib-cssmin": "^0.12.3",
-    "grunt-contrib-qunit": "^0.7.0",
-    "grunt-contrib-watch": "^0.6.1"
+    "clean-css": "^3.4.23",
+    "http-server": "^0.9.0",
+    "jshint": "^2.9.4",
+    "node-sass": "^4.1.1",
+    "testee": "^0.3.0",
+    "uglify-js": "^2.7.5",
+    "watch": "^1.0.1"
   },
   "author": "Heini Fagerlund",
   "license": "MIT",
   "dependencies": {
-    "jquery": "2.1.1",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-uglify": "^0.9.1",
-    "load-grunt-tasks": "^3.2.0"
+    "jquery": "2.1.1"
   },
   "scripts": {
-    "test": "grunt travis --verbose"
+    "build:all:production": "npm run build:css && npm run build:js",
+    "build:css": "npm run clean:css && npm run scss && npm run minify:css",
+    "build:js": "npm run clean:js && npm run minify:js",
+    "clean:css": "rm -r dist/css/* && mkdir -p dist/css",
+    "clean:js": "rm -r dist/js/* && mkdir -p dist/js",
+    "lint": "echo '=> linting' && jshint --reporter=customreporter.js src/js/elections/elections.js test/tests.js",
+    "minify:css": "echo '=> minify:css' && cleancss --skip-advanced dist/css/screen.css -o dist/css/screen.min.css && cleancss --skip-advanced dist/css/print.css -o dist/css/print.min.css",
+    "minify:js": "echo '=> minify:js' && uglifyjs src/js/elections/*.js -o dist/js/election.all.min.js -m --comments",
+    "qunit": "testee test/elections.html --reporter Spec",
+    "scss": "node-sass -i -o dist/css src/sass",
+    "travis": "npm run lint && npm run qunit",
+    "watch:css": "watch 'npm run scss' src/sass",
+    "watch:js": "watch 'npm run minify:js' src/js/elections/",
+    "prebuild:js": "npm run lint"
   }
 }

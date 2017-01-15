@@ -1,13 +1,18 @@
 # Changelog:
 
 - - -
-## Unreleased 
-*(last updated: 2016-01-14)*
+## Unreleased (1.0.0)
+*(last updated: 2017-01-15)*
 
 #### New features:
+* Integrated with Travis CI server
+* Added local server setup (for data feed)
 * Introduced CHANGELOG (ie. extracted into a separate document from README)
 
 #### Changed:
+* Build runs using npm (removed Grunt)
+* Upgraded QUnit version (from v.1.14.0 to v.2.0.1)
+* Dependencies *fully* managed using npm (removed Bower)
 * Updated README formatting
 
 - - -
