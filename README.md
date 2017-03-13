@@ -51,6 +51,8 @@ $ git clone https://github.com/hfagerlund/elections-carousel.git
 ```
 or download the **elections-carousel** project in [.zip format](https://github.com/hfagerlund/elections-carousel/archive/master.zip).
 
+> _**NOTE:**_ **For current development** (ie. [still in progress](https://github.com/hfagerlund/elections-carousel/projects/1)), please see the [latest feature branch](https://github.com/hfagerlund/elections-carousel/tree/modularization-commonjs). 
+
 Install all required [dependencies](https://github.com/hfagerlund/elections-carousel#requirements) by running:
 ```
 $ npm install
