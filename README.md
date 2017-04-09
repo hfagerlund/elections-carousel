@@ -64,6 +64,7 @@ from inside the directory where you extracted the **elections-carousel** project
 ├── dist
 │   ├── css
 │   └── js
+├── docs
 ├── json_feed
 ├── node_modules
 ├── screenshots
@@ -79,6 +80,7 @@ from inside the directory where you extracted the **elections-carousel** project
 | **/dist**  | production-ready (minified,concatenated) files |
 | **/dist/css**  | compiled CSS (.css) files |
 | **/dist/js** | minified version of the combined elections scripts  |
+| **/docs**  | documentation  |
 | **/json_feed**  | local version of the JSON election results feed  |
 | **/node_modules**  | **npm** package(s)/files |
 | **/screenshots**  | screenshots of the **elections-carousel** project |
