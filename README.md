@@ -9,7 +9,7 @@ Enables scrolling through the election results for all ridings using the Next an
 <img style="max-width:100%;" alt="screenshot of elections-carousel page" src="/screenshots/screenshot_elections-html.png" align="center" /><br />
 *Figure 1: screenshot of elections.html page*
 
-The **page title** and **data feed URL** are customizable - refer to the '[Configuration](https://github.com/hfagerlund/elections-carousel#configuration)' section for instructions.
+The **main title** and **data feed URL** are customizable - refer to the '[Configuration](https://github.com/hfagerlund/elections-carousel#configuration)' section for instructions.
 - - -
 
 ## Table of Contents:
@@ -29,6 +29,7 @@ The **page title** and **data feed URL** are customizable - refer to the '[Confi
 
 ### Other:
 * [Changelog](https://github.com/hfagerlund/elections-carousel/blob/master/CHANGELOG.md)
+* [Documentation](https://hfagerlund.github.io/elections-carousel/)
 * [Releases](https://github.com/hfagerlund/elections-carousel/releases)
 * [Roadmap](https://github.com/hfagerlund/elections-carousel/projects/1)
 
