@@ -2,7 +2,7 @@ sudo: false
 language: node_js
 node_js:
   - "7.2.1"
-before_install: if [[ `npm -v` != 7* ]]; then npm i -g npm@7; fi
+before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 install:
   - npm install
   - npm install -g http-server
