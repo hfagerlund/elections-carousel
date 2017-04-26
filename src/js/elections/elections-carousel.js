@@ -58,7 +58,7 @@ var wrapperWidth; //total width of all slides (aligned horizontally)
 //END carousel settings
 
 var ElectionsCarousel = function() {
-  //'use strict';
+  'use strict';
 
   //BEGIN customPubsub
   /*
