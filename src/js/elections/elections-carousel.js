@@ -60,6 +60,7 @@ var wrapperWidth; //total width of all slides (aligned horizontally)
 var ElectionsCarousel = function() {
   'use strict';
 
+
   //BEGIN customPubsub
   /*
    * as per https://addyosmani.com/blog/jquery-1-7s-callbacks-feature-demystified/
