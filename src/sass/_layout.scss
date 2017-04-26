@@ -13,10 +13,6 @@ a {padding:0.2em}
  z-index:20
 }
 
-.pointForm{
- margin-left:3em
-}
-
 .riding {
  display:inline-table;
  margin:0 0 1em 0;
@@ -26,10 +22,11 @@ a {padding:0.2em}
  }
 }
 
-.riding__candidate{
+.riding__list-candidate{
  display:inline-table;
  margin:0;
  padding:0;
+ position:relative;
  vertical-align:bottom;
  width:80px
 }
@@ -38,7 +35,11 @@ a {padding:0.2em}
  padding:0;
 }
 
-.riding__totalVotes{
+.riding__textSummary-candidate{
+ margin-left:3em
+}
+
+.riding__textSummary-totalVotes{
  margin:0;
  padding:1em 0;
  width:500px

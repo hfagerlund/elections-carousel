@@ -15,38 +15,38 @@ $color_party-other_grey:#ccc;
 .riding {
   background-color:transparent;
 
-  @at-root #{&}__candidate {
+  @at-root #{&}__list-candidate {
     @include boxshadow($black);
     color:$black;
     background-color:$color_party-other_grey;
     background-image:
         linear-gradient(#999, $color_party-other_grey);
 
-    @at-root #{&}_ind {
+    @at-root #{&}--ind {
        color:$black;
        background-color:$color_party-other_grey;
        background-image:
         linear-gradient(#999, $color_party-other_grey)
     }
-    @at-root #{&}_grn {
+    @at-root #{&}--grn {
        color:$white;
        background-color:$color_party-grn_green;
        background-image:
         linear-gradient(#31bc0b, $color_party-grn_green)
     }
-    @at-root #{&}_lib {
+    @at-root #{&}--lib {
        color:$white;
        background-color:$color_party-lib_red;
        background-image:
         linear-gradient($color_party-lib_red, #a50b27)
     }
-    @at-root #{&}_ndp {
+    @at-root #{&}--ndp {
        color:#fdfdfd;
        background-color:$color_party-ndp_orange;
        background-image:
         linear-gradient(#ea9502, $color_party-ndp_orange)
     }
-    @at-root #{&}_pc {
+    @at-root #{&}--pc {
        color:$white;
        background-color:$color_party-pc_blue;
        background-image:
@@ -56,11 +56,48 @@ $color_party-other_grey:#ccc;
   
 }
 
-.riding__candidate_ind .percentage {
+.riding__list-candidate--ind .percentage {
  color:$black
 }
 
-.riding__totalVotes {
+
+.riding {
+  @at-root #{&}__textSummary-candidate {
+
+    @at-root #{&}--ind {
+       color:$black;
+       background-color:$color_party-other_grey;
+       background-image:
+        linear-gradient(#999, $color_party-other_grey)
+    }
+    @at-root #{&}--grn {
+       color:$white;
+       background-color:$color_party-grn_green;
+       background-image:
+        linear-gradient(#31bc0b, $color_party-grn_green)
+    }
+    @at-root #{&}--lib {
+       color:$white;
+       background-color:$color_party-lib_red;
+       background-image:
+        linear-gradient($color_party-lib_red, #a50b27)
+    }
+    @at-root #{&}--ndp {
+       color:#fdfdfd;
+       background-color:$color_party-ndp_orange;
+       background-image:
+        linear-gradient(#ea9502, $color_party-ndp_orange)
+    }
+    @at-root #{&}--pc {
+       color:$white;
+       background-color:$color_party-pc_blue;
+       background-image:
+        linear-gradient(#0ea2f2, $color_party-pc_blue)
+    }
+  }
+}
+
+.riding__textSummary-totalVotes {
  background-color:$black;
  color:$white
 }

@@ -1,0 +1,10 @@
+{
+  "env": {
+    "jquery": true
+  },
+  "globals": {},
+  parser: "babel-eslint",
+  "rules": {
+    "no-eq-null": 0
+  }
+}

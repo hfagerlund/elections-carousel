@@ -1,0 +1,48 @@
+<!--
+ * elections-carousel
+ * @copyright (c) Heini Fagerlund
+ * @version 1.0.0
+ * @license MIT
+ -->
+
+<template id="viewTemplate">
+    <h1>{{ pageTitle }}</h1>
+        <div class="{{wrapperRidings}}">
+	    {{#.}}
+            <article id="{{idRiding}}{{id}}" class="riding">
+                <header class="{{ridingHeaderClass}}">
+                    <h2 class="{{ridingHeadingClass}}">Riding of: {{name}}</h2>
+                </header>
+                <ol class="{{ridingListClass}}">
+                    {{#results}}
+                    <li class="{{candidateClass}} {{#lower}}{{listCandidateRoot}}{{partyCode}}{{/lower}}{{#winner}} {{ridingWinnerClass}}{{/winner}}">
+                        <span class="{{capitalizeClass}}">{{#ifWon}}{{/ifWon}}</span>
+                        <span class="{{percentageClass}}">
+                            <span class="{{capitalizeClass}}">{{partyCode}}</span>
+                             {{votePercentage}}%
+                        </span>
+                    </li>
+                    {{/results}}
+                </ol>
+
+                <div class="{{ridingTextSummaryClass}}">
+                {{#results}}
+                <p class="{{ridingPointFormClass}}">
+                    <span class="{{labelClass}} {{capitalizeClass}} {{textCandidateRoot}}{{#lower}}{{partyCode}}{{/lower}}{{#winner}} {{ridingWinnerClass}}{{/winner}}"> {{partyCode}} </span>
+                    {{name}} {{#ifElected}}{{/ifElected}} {{votes}} votes ({{votePercentage}}%)
+                </p>
+                {{/results}}
+                <p class="{{ridingVoteTotalClass}}">
+                    Total votes for this riding:
+                    <span class="{{strongClass}}">{{#ridingVoteTotal}}{{/ridingVoteTotal}}</span>
+                    votes
+                </p>
+                </div>
+            </article>
+	    {{/.}}
+        </div>
+        <div class="{{wrapperControls}}">
+          <div aria-disabled="true" aria-label="Previous riding" class="ctrl ctrl--back ctrl--disabled" id="ecBack" tabindex="0" role="button"></div>
+          <div aria-disabled="false" aria-label="Next riding" class="ctrl ctrl--next" tabindex="0" id="ecNext" role="button"></div>
+        </div>
+</template>

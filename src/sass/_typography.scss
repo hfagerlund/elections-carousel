@@ -1,12 +1,16 @@
 .cap{text-transform:uppercase}
+.ctrl--back:before{content:"\2039"}
+.ctrl--next:before{content:"\203A"}
+.ec-results h1{padding:0.5em 0 0.5em 0.5em}
 .label{font-weight:bold}
-.pointForm:before{content:"• "}
+.riding__textSummary-candidate:before{content:"• "}
 .riding {
   h2 {
     font-size:1.4em;
     font-weight:bold;
   }
 }
-.riding__list, .riding__totalVotes {
+.riding__list, .riding__textSummary-totalVotes {
  text-align:center
 }
+.strong{font-weight:bold}

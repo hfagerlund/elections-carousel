@@ -1,9 +1,0 @@
-{
-  "globals": {
-    "$": false,
-    "jQuery": false,
-    "window": false,
-    "BoD": false
-  }
-}
-

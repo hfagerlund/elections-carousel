@@ -2,18 +2,36 @@
 
 - - -
 ## Unreleased (1.0.0)
-*(last updated: 2017-01-15)*
+*(last updated: 2017-04-25)*
 
 #### New features:
+* Universal Module Definition (UMD) support
+* Mustache client-side templating (cleaner separation of concerns)
+* Support for coding style consistency (added .editorconfig)
+* Code coverage reporting (using Istanbul)
+* Preliminary cleanup for (potential future) npm package creation
 * Integrated with Travis CI server
 * Added local server setup (for data feed)
 * Introduced CHANGELOG (ie. extracted into a separate document from README)
 
 #### Changed:
-* Build runs using npm (removed Grunt)
-* Upgraded QUnit version (from v.1.14.0 to v.2.0.1)
-* Dependencies *fully* managed using npm (removed Bower)
-* Updated README formatting
+* Replaced QUnit test harness with TAPE (to support Node as well as browser)
+  * ~~Upgraded QUnit version (from v.1.14.0 to v.2.0.1)~~
+* Directory structure modifications (eg. relocated sample data feed)
+* Modified markup, semantic improvements (eg. 'grouping' of text summary elements with container)
+* Accessibility improvements:
+  * Added ARIA role and support for carousel control activation using space bar, keyboard
+* Styling changes:
+  * Revised container identifiers (new classnames)
+  * Fixed main heading display, indentation
+  * Carousel controls' arrow icons and disabled/enabled state styling relocated from markup and script respectively
+  * Removed 'print' stylesheet ('media' attribute for main stylesheet changed from 'screen' to 'all')
+* Improved (JavaScript) linting
+* Simplified dependency management, augmented build toolchain
+  * Added Webpack (v.2.3.3)
+  * Build runs using npm (removed Grunt)
+  * Dependencies *fully* managed using npm (removed Bower)
+* Updated format of README
 
 - - -
 ## 0.4.0 - 2016-01-13
