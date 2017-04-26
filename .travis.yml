@@ -6,6 +6,5 @@ install:
   - npm install
   - npm install -g http-server
 before_script:
-  - cd json_feed
   - http-server &
 script: npm run travis

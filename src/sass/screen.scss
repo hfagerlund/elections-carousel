@@ -1,7 +1,7 @@
-/*!
+/*
  * elections-carousel
  * @copyright (c) Heini Fagerlund
- * @version 0.4.0
+ * @version 1.0.0
  * @license MIT
  */
 
@@ -17,19 +17,19 @@
 @import "typography";
 /* @import "media-queries.scss"; */
 
-#eResults{font-family:'Noto Sans',verdana,arial,sans-serif;font-size:1em}
+.ec-results{font-family:'Noto Sans',verdana,arial,sans-serif;font-size:1em}
 
 h1,h2{margin:0 0 0.5em 0}
 hr{border:0;border-top:1px solid #ccc}
 
-.riding__candidate{
+.riding__list-candidate{
  font-weight:bold;
  list-style-type:none;
  padding:0.3em 1em;
 }
 
 /* CSS3 animations */
-.btn:active{
+.ctrl:active{
 animation-duration:0.5s;
 animation-name:press;
 animation-iteration-count:1;
@@ -38,10 +38,12 @@ animation-iteration-count:1;
 
 @keyframes press{
 0%{padding:0;@include insetboxshadow($black);}
-100%{padding:10px}
+100%{padding:0}
 }
 
-.btn_disabled{
- @extend .btn;
- animation:none;
+.ctrl--disabled{
+ @extend .ctrl;
+ animation:none!important;
+ background-color:#ccc; /* override .ctrl background-color */
+ cursor:text
 }

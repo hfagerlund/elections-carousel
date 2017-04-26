@@ -1,30 +1,8 @@
 $ridingWidth:500px;
 
-#eResults { 
-  border:1px solid #999; 
-  width: $ridingWidth;
-  min-height: 550px;
-  overflow: hidden;
-  padding-bottom:2em;
-  position: relative;
-}
-
-#wrapper { 
-  position: absolute;
-  width: 50000px;
-}
-
-.riding {
- width:$ridingWidth;
-}
-
-.riding__candidate {
- min-height:1em;
-}
-
-.btn {
+.ctrl {
  background-color:#99cedb;
- @include btnsize(50px);
+ @include ctrlsize(50px);
  color:#000;
  display:inline-block;
  font-size:2em;
@@ -38,11 +16,33 @@ $ridingWidth:500px;
  vertical-align:middle;
  z-index:20000;
 }
-.btn--back{
+.ctrl--back{
  float:left;
  margin-left:100px
 }
-.btn--next{
+.ctrl--next{
  float:right;
  margin-right:120px
+}
+
+.ec-results {
+  border:1px solid #999;
+  width: $ridingWidth;
+  min-height: 550px;
+  overflow: hidden;
+  padding-bottom:2em;
+  position: relative;
+}
+
+.ec-results__wrapper-ridings {
+  position: absolute;
+  width: 50000px;
+}
+
+.riding {
+ width:$ridingWidth;
+}
+
+.riding__list-candidate {
+ min-height:1em;
 }
