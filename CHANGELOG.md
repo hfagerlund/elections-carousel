@@ -1,9 +1,7 @@
 # Changelog:
 
 - - -
-## Unreleased (1.0.0)
-*(last updated: 2017-04-26)*
-
+## 1.0.0 - 2017-04-26
 #### New features:
 * Universal Module Definition (UMD) support
 * Mustache client-side templating (cleaner separation of concerns)
