@@ -2,7 +2,7 @@
 
 - - -
 ## Unreleased (1.0.0)
-*(last updated: 2017-04-25)*
+*(last updated: 2017-04-26)*
 
 #### New features:
 * Universal Module Definition (UMD) support
@@ -15,6 +15,7 @@
 * Introduced CHANGELOG (ie. extracted into a separate document from README)
 
 #### Changed:
+* Launched [project documentation site](https://hfagerlund.github.io/elections-carousel/)
 * Replaced QUnit test harness with TAPE (to support Node as well as browser)
   * ~~Upgraded QUnit version (from v.1.14.0 to v.2.0.1)~~
 * Directory structure modifications (eg. relocated sample data feed)

@@ -1,0 +1,179 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Introduction\n\n\nWelcome to the docs for \nelections-carousel\n: a JavaScript library for a carousel-style presentation of data from a JSON feed of election results.\n\n\nThe \nelections-carousel\n project repository is available at \nhttps://github.com/hfagerlund/elections-carousel\n.\n\n\nTL;DR\n\n\nSetting up:\n\n\n$ git clone https://github.com/hfagerlund/elections-carousel.git\n$ npm install\n$ http-server\n# browse to http://127.0.0.1:8080/elections.html\n\n\n\n\n\nAdding to a page:\n\n\n//src of main.js\n\nvar ecarousel = new (require(\n./elections-carousel\n));\n\necarousel.init({userURL:'http://127.0.0.1:8080/src/assets/fixtures/results.js', \n                userMainHeadingText: '2011 Election Results'});\n\n\n\n\nProject layout\n\n\ncoverage/          # (Istanbul) code coverage reports\ndist/              # production-ready (minified,concatenated,transpiled) files\n    css/           # compiled CSS (.css) files\n    js/            # compiled JS (.js) files\ndocs/              # documentation\nnode_modules/      # **npm** package(s)/files\nscreenshots/       # screenshots of the **elections-carousel** project\nsrc/               # all project source code\n    assets/        # additional project files\n        fixtures/  # local version of the sample JSON election results feed\n        templates  # (Mustache) template files\n    js/            # scripts\n        elections/ # elections-carousel scripts (unminified)\n        vendors/   # third-party scripts - eg. Google fonts\n    sass/          # SASS (.scss) files\ntest/              # (Tape) test files", 
+            "title": "Intro"
+        }, 
+        {
+            "location": "/#introduction", 
+            "text": "Welcome to the docs for  elections-carousel : a JavaScript library for a carousel-style presentation of data from a JSON feed of election results.  The  elections-carousel  project repository is available at  https://github.com/hfagerlund/elections-carousel .", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#tldr", 
+            "text": "Setting up:  $ git clone https://github.com/hfagerlund/elections-carousel.git\n$ npm install\n$ http-server\n# browse to http://127.0.0.1:8080/elections.html  Adding to a page:  //src of main.js\n\nvar ecarousel = new (require( ./elections-carousel ));\n\necarousel.init({userURL:'http://127.0.0.1:8080/src/assets/fixtures/results.js', \n                userMainHeadingText: '2011 Election Results'});", 
+            "title": "TL;DR"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "coverage/          # (Istanbul) code coverage reports\ndist/              # production-ready (minified,concatenated,transpiled) files\n    css/           # compiled CSS (.css) files\n    js/            # compiled JS (.js) files\ndocs/              # documentation\nnode_modules/      # **npm** package(s)/files\nscreenshots/       # screenshots of the **elections-carousel** project\nsrc/               # all project source code\n    assets/        # additional project files\n        fixtures/  # local version of the sample JSON election results feed\n        templates  # (Mustache) template files\n    js/            # scripts\n        elections/ # elections-carousel scripts (unminified)\n        vendors/   # third-party scripts - eg. Google fonts\n    sass/          # SASS (.scss) files\ntest/              # (Tape) test files", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/", 
+            "text": "Style guide\n\n\nNaming conventions\n\n\nFunctions, Methods\n\n\nCamel case starting with lowercase letter. Private method names prefixed with '_' (underscore).\n\n\nExample - Private method:\n\n\nfunction _doSomething(foo) {\n    //...\n}\n\n\n\n\nModules\n\n\nCamel case starting with uppercase letter.\n\n\nVariables\n\n\nCamel case starting with lowercase letter.\n\n\n\n\nLinting\n\n\nRefer to \n.eslintrc\n .\n\n\nSpacing\n\n\n2 spaces for indentation. No whitespace at EOL.\n\n\nRefer to \n.editconfig\n .", 
+            "title": "Style guide"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/#style-guide", 
+            "text": "", 
+            "title": "Style guide"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/#naming-conventions", 
+            "text": "", 
+            "title": "Naming conventions"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/#functions-methods", 
+            "text": "Camel case starting with lowercase letter. Private method names prefixed with '_' (underscore).  Example - Private method:  function _doSomething(foo) {\n    //...\n}", 
+            "title": "Functions, Methods"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/#modules", 
+            "text": "Camel case starting with uppercase letter.", 
+            "title": "Modules"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/#variables", 
+            "text": "Camel case starting with lowercase letter.", 
+            "title": "Variables"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/#linting", 
+            "text": "Refer to  .eslintrc  .", 
+            "title": "Linting"
+        }, 
+        {
+            "location": "/developer-guide/style-guide/#spacing", 
+            "text": "2 spaces for indentation. No whitespace at EOL.  Refer to  .editconfig  .", 
+            "title": "Spacing"
+        }, 
+        {
+            "location": "/about/license/", 
+            "text": "License\n\n\nThe license for \nelections-carousel\n is also available at \nhttps://github.com/hfagerlund/elections-carousel\n.\n\n\nThe MIT License (MIT)\n[OSI Approved License]\n\nThe MIT License (MIT)\n\nCopyright (c) 2015 Heini Fagerlund\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \nSoftware\n), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \nAS IS\n, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/about/license/#license", 
+            "text": "The license for  elections-carousel  is also available at  https://github.com/hfagerlund/elections-carousel .  The MIT License (MIT)\n[OSI Approved License]\n\nThe MIT License (MIT)\n\nCopyright (c) 2015 Heini Fagerlund\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the  Software ), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED  AS IS , WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/about/release-notes/", 
+            "text": "Release notes\n\n\nLinks to all release notes are also available at \nhttps://github.com/hfagerlund/elections-carousel/tags\n.\n\n\n\n\nRelated reference: \nCHANGELOG\n\n\n\n\n\n\nv1.0.0\n\n\n(Apr 26, 2017)\n\n\nNew Features:\n\n\n\n\nLaunched \nproject documentation site\n\n\nNew architecture (includes UMD support)\n\n\nClient-side templating (Mustache)\n\n\nAdded custom script to automate updating of dynamic chunkhash values from (CSS/JS) bundler in demo page\n\n\nAdded .editorconfig\n\n\nIntegrated with Travis\n\n\nCHANGELOG separated from README\n\n\n\n\nChanged:\n\n\n\n\nModified build toolchain (added Webpack; removed Grunt, Bower)\n\n\nReplaced QUnit test harness with TAPE (to support Node as well as browser)\n\n\nRevised CSS naming conventions\n\n\nModified JS linting (replaced JSHint with ESLint)\n\n\n\n\nFixed:\n\n\n\n\nAccessibility compliance, keyboard support for button controls\n\n\nButton controls 'jumping' on press/release bug\n\n\n\n\n\n\nv0.4.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nNew look-and-feel (GUI improvements)\n\n\nswitched from horizontal to vertical bars\n\n\nheight of bars provides visualization of percentage of votes per candidate\n\n\n\n\n\n\nstyling improvements: font updates, gradients, party 'labels' (included in list format), emphasized riding vote totals\n\n\n(minor) text copy changes\n\n\n\n\nAdditional changes:\n\n\n\n\nimproved alphabetical ordering of styling rules\n\n\nupdated copyrights\n\n\nremoved unnecessary role attributes\n\n\nbumped version number\n\n\nupdated README (Changelog, screenshot)\n\n\n\n\n\n\nv0.3.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nReordered results: candidates within each riding now listed in descending order by number of votes\n\n\n\n\n\n\nv0.2.1\n\n\n(Dec 14, 2015)\n\n\nFixed:\n\n\n\n\nRemoved deprecated code\n\n\n\n\n\n\nv0.2.0\n\n\n(Dec 14, 2015)\n\n\nNew features:\n\n\n\n\nDefined global, read-only variables (JSHint strict mode)\n\n\nAutomated package management\n\n\n\n\nChanged:\n\n\n\n\nRefactored code, performance improvements\n\n\nImproved vote percentages (to 2 decimal places; totals 100%)\n\n\nAccessibility enhancement: 'Elected' text rendering\n\n\n\n\nFixed:\n\n\n\n\nButton (enabled/disabled) state bugs\n\n\n\n\n\n\nv0.1.1\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nEnhanced button states\n\n\n\n\n\n\nv0.1.0\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nInitial version", 
+            "title": "Release Notes"
+        }, 
+        {
+            "location": "/about/release-notes/#release-notes", 
+            "text": "Links to all release notes are also available at  https://github.com/hfagerlund/elections-carousel/tags .   Related reference:  CHANGELOG", 
+            "title": "Release notes"
+        }, 
+        {
+            "location": "/about/release-notes/#v100", 
+            "text": "(Apr 26, 2017)", 
+            "title": "v1.0.0"
+        }, 
+        {
+            "location": "/about/release-notes/#new-features", 
+            "text": "Launched  project documentation site  New architecture (includes UMD support)  Client-side templating (Mustache)  Added custom script to automate updating of dynamic chunkhash values from (CSS/JS) bundler in demo page  Added .editorconfig  Integrated with Travis  CHANGELOG separated from README", 
+            "title": "New Features:"
+        }, 
+        {
+            "location": "/about/release-notes/#changed", 
+            "text": "Modified build toolchain (added Webpack; removed Grunt, Bower)  Replaced QUnit test harness with TAPE (to support Node as well as browser)  Revised CSS naming conventions  Modified JS linting (replaced JSHint with ESLint)", 
+            "title": "Changed:"
+        }, 
+        {
+            "location": "/about/release-notes/#fixed", 
+            "text": "Accessibility compliance, keyboard support for button controls  Button controls 'jumping' on press/release bug", 
+            "title": "Fixed:"
+        }, 
+        {
+            "location": "/about/release-notes/#v040", 
+            "text": "(Jan 13, 2016)", 
+            "title": "v0.4.0"
+        }, 
+        {
+            "location": "/about/release-notes/#new-features_1", 
+            "text": "New look-and-feel (GUI improvements)  switched from horizontal to vertical bars  height of bars provides visualization of percentage of votes per candidate    styling improvements: font updates, gradients, party 'labels' (included in list format), emphasized riding vote totals  (minor) text copy changes", 
+            "title": "New Features:"
+        }, 
+        {
+            "location": "/about/release-notes/#additional-changes", 
+            "text": "improved alphabetical ordering of styling rules  updated copyrights  removed unnecessary role attributes  bumped version number  updated README (Changelog, screenshot)", 
+            "title": "Additional changes:"
+        }, 
+        {
+            "location": "/about/release-notes/#v030", 
+            "text": "(Jan 13, 2016)", 
+            "title": "v0.3.0"
+        }, 
+        {
+            "location": "/about/release-notes/#new-features_2", 
+            "text": "Reordered results: candidates within each riding now listed in descending order by number of votes", 
+            "title": "New Features:"
+        }, 
+        {
+            "location": "/about/release-notes/#v021", 
+            "text": "(Dec 14, 2015)", 
+            "title": "v0.2.1"
+        }, 
+        {
+            "location": "/about/release-notes/#fixed_1", 
+            "text": "Removed deprecated code", 
+            "title": "Fixed:"
+        }, 
+        {
+            "location": "/about/release-notes/#v020", 
+            "text": "(Dec 14, 2015)", 
+            "title": "v0.2.0"
+        }, 
+        {
+            "location": "/about/release-notes/#new-features_3", 
+            "text": "Defined global, read-only variables (JSHint strict mode)  Automated package management", 
+            "title": "New features:"
+        }, 
+        {
+            "location": "/about/release-notes/#changed_1", 
+            "text": "Refactored code, performance improvements  Improved vote percentages (to 2 decimal places; totals 100%)  Accessibility enhancement: 'Elected' text rendering", 
+            "title": "Changed:"
+        }, 
+        {
+            "location": "/about/release-notes/#fixed_2", 
+            "text": "Button (enabled/disabled) state bugs", 
+            "title": "Fixed:"
+        }, 
+        {
+            "location": "/about/release-notes/#v011", 
+            "text": "(Jul 5, 2015)", 
+            "title": "v0.1.1"
+        }, 
+        {
+            "location": "/about/release-notes/#new-features_4", 
+            "text": "Enhanced button states", 
+            "title": "New features:"
+        }, 
+        {
+            "location": "/about/release-notes/#v010", 
+            "text": "(Jul 5, 2015)", 
+            "title": "v0.1.0"
+        }, 
+        {
+            "location": "/about/release-notes/#new-features_5", 
+            "text": "Initial version", 
+            "title": "New features:"
+        }
+    ]
+}

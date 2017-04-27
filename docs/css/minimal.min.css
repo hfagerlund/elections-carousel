@@ -1,6 +1,0 @@
-@charset "UTF-8";/*!
- * 'minimal' documentation theme
- * @copyright (c) Heini Fagerlund
- * @version 0.0.1
- * 
- */body{font-family:'courier new',serif;background-color:#f0f0f0;color:#333;line-height:1.4;margin:0 auto;width:50em}a{color:#0366d6}a:visited{color:#000}a:hover{color:#000;font-weight:bold}a:active{color:#999}p{margin-bottom:2em}footer{border-top:1px dotted #999}.bold{font-weight:bold;text-transform:uppercase}
