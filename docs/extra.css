@@ -1,0 +1,2 @@
+a[href^="http://"]:not([href*="hfagerlund.github.io/elections-carousel/"]):after { content:"\a0\2197"; }
+a[href^="https://"]:not([href*="hfagerlund.github.io/elections-carousel/"]):after { content:"\a0\2197"; }
