@@ -1,2 +1,64 @@
+body{font-family:arial,sans-serif;font-size:120%;letter-spacing:0.025em}
+
 a[href^="http://"]:not([href*="hfagerlund.github.io/elections-carousel/"]):after { content:"\a0\2197"; }
 a[href^="https://"]:not([href*="hfagerlund.github.io/elections-carousel/"]):after { content:"\a0\2197"; }
+
+a:hover,a:focus,button:focus,.header-main__link:hover,.header-main__link:focus{outline:2px solid #aadd00}
+
+main li:before,.nav-main__item--current:before,.page-toc__link:before{content:"\25b6\a0";font-size:70%;vertical-align:text-top}
+
+/* BEGIN custom color scheme */
+a:link{color:#0366d6}
+a:visited{color:#128dff}
+a:hover,a:focus,button:focus {color:#128dff}
+a:active{color:#35c6ff}
+
+blockquote{border-color:#128dff;color:#128dff}
+
+code{background-color:#e0f7ff}
+
+h1,h2,h3,h4,h5,h6{color:#0366d6}
+
+main li:before{color:#7a9e00}
+
+.footer-main{background-color:#cae4ff;color:#0077ff;border-color:#0366d6}
+
+.header-main__link,.header-main__link:visited{color:#0366d6}
+.header-main__link:hover,.header-main__link:focus {color:#128dff}
+.header-main__link:active{color:#35c6ff}
+
+hr{border-color:#0366d6}
+
+.maincontent__link{border-color:#0366d6}
+
+.nav-main{background-color:#cae4ff;border-color:#0366d6;color:#0366d6}
+.nav-main__heading{border-color:#0366d6}
+.nav-main__item--current{border-color:#0077ff}
+.nav-main__item--current:before{color:#0077ff}
+.nav-main__item--repo{border-color:#0366d6}
+
+.nav-main__link--current{color:#0366d6}
+
+.form__btn-submit{background-color:#0077ff;border-color:#0366d6;color:#fff}
+.form__btn-submit:hover{background-color:#fff;color:#128dff}
+.form--search{background-color:#aadd00}
+.form__input{border-color:#0077ff;color:#666}
+
+.page-toc{border-color:#bbddff}
+.page-toc__heading{border-color:#0366d6}
+.page-toc__link:before{color:#7a9e00}
+
+.section-toc{border-color:#0366d6}
+.section-toc__link{color:#fff}
+
+.skiptocontent{color:#ccc}
+
+.skiptocontent:focus{background-color:#0366d6;color:#fff}
+.skiptotop:before{color:#0366d6}
+.skiptotop{background-color:#fff;border-color:#0366d6;color:#0366d6}
+
+/* phone-and-tablet */
+@media only screen and (max-width:1199px) {
+    code{background-color:transparent;border-color:#cae4ff}
+}
+/* END custom color scheme */
