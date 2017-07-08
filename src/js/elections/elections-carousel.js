@@ -102,13 +102,13 @@ ElectionsCarousel.prototype = {
         /*
          * attach animation behavior to the controls' onclick and onkeydown events
         **/
-        $( document ).on( 'click', 'div.ctrl', function(e) { //jQuery 1.7+
+        $( document ).on( 'click', '.ctrl', function(e) { //jQuery 1.7+
               var whichControl = $(this).attr('class');
               ElectionsCarousel.prototype.ctrlClick(whichControl, data);
         });
 
         //keyboard support
-        $( document ).on( 'keydown', 'div.ctrl', function(e) {
+        $( document ).on( 'keydown', '.ctrl', function(e) {
               var whichControl = $(e.target).attr('class');
               ElectionsCarousel.prototype.ctrlClick(whichControl, data);
         });
@@ -164,12 +164,16 @@ ElectionsCarousel.prototype = {
         }
   },
   disableCtrl: function(ctrlClass){
-      $('.'+config.css.ctrlClassRoot+ctrlClass).addClass(classname.disabled);
-      $('.'+config.css.ctrlClassRoot+ctrlClass).attr('aria-disabled','true');
+      var ctrl = $('.'+config.css.ctrlClassRoot+ctrlClass);
+      ctrl.addClass(classname.disabled);
+      ctrl.attr('aria-disabled','true'); //not strictly required anymore (since button element natively supports 'disabled' attribute)
+      ctrl.attr("disabled","disabled");
   },
   reEnableCtrl: function(ctrlClass){
-      $('.'+config.css.ctrlClassRoot+ctrlClass).removeClass(classname.disabled);
-      $('.'+config.css.ctrlClassRoot+ctrlClass).attr('aria-disabled','false');
+      var ctrl = $('.'+config.css.ctrlClassRoot+ctrlClass);
+      ctrl.removeClass(classname.disabled);
+      ctrl.attr('aria-disabled','false');
+      ctrl.removeAttr("disabled");
   },
   displayBars: function(notificationMsgObj){
       var mainStyle = document.styleSheets[0];

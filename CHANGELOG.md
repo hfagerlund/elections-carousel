@@ -1,6 +1,11 @@
 # Changelog:
 
 - - -
+## 1.0.1 - 2017-07-08
+#### Fixed:
+* Accessibility:
+  * Replaced carousel control elements in template and modified corresponding attributes, behaviour, styling
+- - -
 ## 1.0.0 - 2017-04-26
 #### New features:
 * Universal Module Definition (UMD) support

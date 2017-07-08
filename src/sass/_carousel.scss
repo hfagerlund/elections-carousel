@@ -16,6 +16,9 @@ $ridingWidth:500px;
  vertical-align:middle;
  z-index:20000;
 }
+.ctrl:not([disabled]):hover{
+  cursor:pointer
+}
 .ctrl--back{
  float:left;
  margin-left:100px

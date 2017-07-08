@@ -41,6 +41,10 @@ animation-iteration-count:1;
 100%{padding:0}
 }
 
+/* BEGIN <button> defaults removal */
+button{background-color:transparent;border:0;box-shadow:none;padding:0}
+/* END <button> defaults removal */
+
 .ctrl--disabled{
  @extend .ctrl;
  animation:none!important;
