@@ -72,13 +72,23 @@
         }, 
         {
             "location": "/about/release-notes/", 
-            "text": "Release notes\n\n\nLinks to all release notes are also \nlisted under 'Tags'\n in the \nelections-carousel\n repository.\n\n\n\n\nRelated reference: \nCHANGELOG\n\n\n\n\n\n\nv1.0.0\n\n\n(Apr 26, 2017)\n\n\nNew Features:\n\n\n\n\nLaunched \nproject documentation site\n\n\nNew architecture (includes UMD support)\n\n\nClient-side templating (Mustache)\n\n\nAdded custom script to automate updating of dynamic chunkhash values from (CSS/JS) bundler in demo page\n\n\nAdded .editorconfig\n\n\nIntegrated with Travis\n\n\nCHANGELOG separated from README\n\n\n\n\nChanged:\n\n\n\n\nModified build toolchain (added Webpack; removed Grunt, Bower)\n\n\nReplaced QUnit test harness with TAPE (to support Node as well as browser)\n\n\nRevised CSS naming conventions\n\n\nModified JS linting (replaced JSHint with ESLint)\n\n\n\n\nFixed:\n\n\n\n\nAccessibility compliance, keyboard support for button controls\n\n\nButton controls 'jumping' on press/release bug\n\n\n\n\n\n\nv0.4.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nNew look-and-feel (GUI improvements)\n\n\nswitched from horizontal to vertical bars\n\n\nheight of bars provides visualization of percentage of votes per candidate\n\n\n\n\n\n\nstyling improvements: font updates, gradients, party 'labels' (included in list format), emphasized riding vote totals\n\n\n(minor) text copy changes\n\n\n\n\nChanged:\n\n\n\n\nimproved alphabetical ordering of styling rules\n\n\nupdated copyrights\n\n\nremoved unnecessary role attributes\n\n\nbumped version number\n\n\nupdated README (Changelog, screenshot)\n\n\n\n\n\n\nv0.3.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nReordered results: candidates within each riding now listed in descending order by number of votes\n\n\n\n\n\n\nv0.2.1\n\n\n(Dec 14, 2015)\n\n\nFixed:\n\n\n\n\nRemoved deprecated code\n\n\n\n\n\n\nv0.2.0\n\n\n(Dec 14, 2015)\n\n\nNew features:\n\n\n\n\nDefined global, read-only variables (JSHint strict mode)\n\n\nAutomated package management\n\n\n\n\nChanged:\n\n\n\n\nRefactored code, performance improvements\n\n\nImproved vote percentages (to 2 decimal places; totals 100%)\n\n\nAccessibility enhancement: 'Elected' text rendering\n\n\n\n\nFixed:\n\n\n\n\nButton (enabled/disabled) state bugs\n\n\n\n\n\n\nv0.1.1\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nEnhanced button states\n\n\n\n\n\n\nv0.1.0\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nInitial version", 
+            "text": "Release notes\n\n\nLinks to all release notes are also \nlisted under 'Tags'\n in the \nelections-carousel\n repository.\n\n\n\n\nRelated reference: \nCHANGELOG\n\n\n\n\n\n\nv1.0.1\n\n\n(Jul 8, 2017)\n\n\nFixed:\n\n\n\n\nAccessibility bug: replaced carousel control elements\n\n\n\n\n\n\nv1.0.0\n\n\n(Apr 26, 2017)\n\n\nNew Features:\n\n\n\n\nLaunched \nproject documentation site\n\n\nNew architecture (includes UMD support)\n\n\nClient-side templating (Mustache)\n\n\nAdded custom script to automate updating of dynamic chunkhash values from (CSS/JS) bundler in demo page\n\n\nAdded .editorconfig\n\n\nIntegrated with Travis\n\n\nCHANGELOG separated from README\n\n\n\n\nChanged:\n\n\n\n\nModified build toolchain (added Webpack; removed Grunt, Bower)\n\n\nReplaced QUnit test harness with TAPE (to support Node as well as browser)\n\n\nRevised CSS naming conventions\n\n\nModified JS linting (replaced JSHint with ESLint)\n\n\n\n\nFixed:\n\n\n\n\nAccessibility compliance, keyboard support for button controls\n\n\nButton controls 'jumping' on press/release bug\n\n\n\n\n\n\nv0.4.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nNew look-and-feel (GUI improvements)\n\n\nswitched from horizontal to vertical bars\n\n\nheight of bars provides visualization of percentage of votes per candidate\n\n\n\n\n\n\nstyling improvements: font updates, gradients, party 'labels' (included in list format), emphasized riding vote totals\n\n\n(minor) text copy changes\n\n\n\n\nChanged:\n\n\n\n\nimproved alphabetical ordering of styling rules\n\n\nupdated copyrights\n\n\nremoved unnecessary role attributes\n\n\nbumped version number\n\n\nupdated README (Changelog, screenshot)\n\n\n\n\n\n\nv0.3.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nReordered results: candidates within each riding now listed in descending order by number of votes\n\n\n\n\n\n\nv0.2.1\n\n\n(Dec 14, 2015)\n\n\nFixed:\n\n\n\n\nRemoved deprecated code\n\n\n\n\n\n\nv0.2.0\n\n\n(Dec 14, 2015)\n\n\nNew features:\n\n\n\n\nDefined global, read-only variables (JSHint strict mode)\n\n\nAutomated package management\n\n\n\n\nChanged:\n\n\n\n\nRefactored code, performance improvements\n\n\nImproved vote percentages (to 2 decimal places; totals 100%)\n\n\nAccessibility enhancement: 'Elected' text rendering\n\n\n\n\nFixed:\n\n\n\n\nButton (enabled/disabled) state bugs\n\n\n\n\n\n\nv0.1.1\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nEnhanced button states\n\n\n\n\n\n\nv0.1.0\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nInitial version", 
             "title": "Release Notes"
         }, 
         {
             "location": "/about/release-notes/#release-notes", 
             "text": "Links to all release notes are also  listed under 'Tags'  in the  elections-carousel  repository.   Related reference:  CHANGELOG", 
             "title": "Release notes"
+        }, 
+        {
+            "location": "/about/release-notes/#v101", 
+            "text": "(Jul 8, 2017)", 
+            "title": "v1.0.1"
+        }, 
+        {
+            "location": "/about/release-notes/#fixed", 
+            "text": "Accessibility bug: replaced carousel control elements", 
+            "title": "Fixed:"
         }, 
         {
             "location": "/about/release-notes/#v100", 
@@ -96,7 +106,7 @@
             "title": "Changed:"
         }, 
         {
-            "location": "/about/release-notes/#fixed", 
+            "location": "/about/release-notes/#fixed_1", 
             "text": "Accessibility compliance, keyboard support for button controls  Button controls 'jumping' on press/release bug", 
             "title": "Fixed:"
         }, 
@@ -131,7 +141,7 @@
             "title": "v0.2.1"
         }, 
         {
-            "location": "/about/release-notes/#fixed_1", 
+            "location": "/about/release-notes/#fixed_2", 
             "text": "Removed deprecated code", 
             "title": "Fixed:"
         }, 
@@ -151,7 +161,7 @@
             "title": "Changed:"
         }, 
         {
-            "location": "/about/release-notes/#fixed_2", 
+            "location": "/about/release-notes/#fixed_3", 
             "text": "Button (enabled/disabled) state bugs", 
             "title": "Fixed:"
         }, 
