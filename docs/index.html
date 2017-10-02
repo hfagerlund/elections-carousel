@@ -58,7 +58,11 @@
         <li class="nav-main__item" role="menuitem">
           
                                
-              <a class="nav-main__link" href="developer-guide/style-guide/"> Developer Guide</a>
+              <a class="nav-main__link" href="developer-guide/parameters/"> Developer Guide</a>
+            
+          
+            
+          
             
           
         </li>
@@ -80,7 +84,7 @@
     
     
       <li class="nav-main__item nav-main__item--repo" role="menuitem">
-     	  <a class="nav-main__link nav-main__link--repo" href="https://github.com/hfagerlund/elections-carousel/">GitHub</a>
+     	  <a class="nav-main__link nav-main__link--repo" href="https://github.com/hfagerlund/elections-carousel">GitHub</a>
       </li>
     
   </ul>
@@ -94,6 +98,10 @@
     
       
         
+        
+          
+        
+          
         
           
         
@@ -117,8 +125,15 @@
       <h1 id="introduction">Introduction</h1>
 <p>Welcome to the documentation site for <strong>elections-carousel</strong>: a JavaScript library for a carousel-style presentation of data from a JSON feed of election results.</p>
 <p>The <strong>elections-carousel</strong> project repository is available <a href="https://github.com/hfagerlund/elections-carousel">on GitHub</a>.</p>
-<h2 id="tldr">TL;DR</h2>
-<p><strong>Setting up:</strong></p>
+<p><img alt="Screenshot of ElectionsCarousel module" src="https://raw.githubusercontent.com/hfagerlund/elections-carousel/master/screenshots/screenshot_elections-html.png" /></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Automatic <a href="https://hfagerlund.github.io/elections-carousel/developer-guide/usage/#running-the-build">bundle hash updates</a>;</li>
+<li><a href="https://hfagerlund.github.io/elections-carousel/developer-guide/parameters/">Customizable</a>;</li>
+<li>Modular (UMD support);</li>
+<li><a href="https://hfagerlund.github.io/elections-carousel/developer-guide/usage/#keyboard-support">Keyboard support</a>.</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
 <pre><code>$ git clone https://github.com/hfagerlund/elections-carousel.git
 $ npm install
 $ http-server
@@ -126,15 +141,7 @@ $ http-server
 
 </code></pre>
 
-<p><strong>Adding to a page:</strong></p>
-<pre><code>//src of main.js
-
-var ecarousel = new (require(&quot;./elections-carousel&quot;));
-
-ecarousel.init({userURL:'http://127.0.0.1:8080/src/assets/fixtures/results.js', 
-                userMainHeadingText: '2011 Election Results'});
-</code></pre>
-
+<p>Refer to <a href="https://hfagerlund.github.io/elections-carousel/developer-guide/usage/">usage</a> for more details.</p>
 <h2 id="project-layout">Project layout</h2>
 <pre><code>coverage/          # (Istanbul) code coverage reports
 dist/              # production-ready (minified,concatenated,transpiled) files
@@ -162,7 +169,9 @@ test/              # (Tape) test files
 
     <li class="page-toc__item"><a href="#introduction" class="page-toc__link" tabindex="0">Introduction</a></li>
     
-        <li class="page-toc__item"><a href="#tldr" class="page-toc__link" tabindex="0">TL;DR</a></li>
+        <li class="page-toc__item"><a href="#features" class="page-toc__link" tabindex="0">Features</a></li>
+    
+        <li class="page-toc__item"><a href="#quick-start" class="page-toc__link" tabindex="0">Quick Start</a></li>
     
         <li class="page-toc__item"><a href="#project-layout" class="page-toc__link" tabindex="0">Project layout</a></li>
     
@@ -175,7 +184,7 @@ test/              # (Tape) test files
    
      
     
-      <a href="developer-guide/style-guide/" class="maincontent__link maincontent__link--next-page">Next: Style guide</a>
+      <a href="developer-guide/parameters/" class="maincontent__link maincontent__link--next-page">Next: Parameters</a>
     
    
 
@@ -210,7 +219,7 @@ test/              # (Tape) test files
 
   <!--
   MkDocs version : 0.16.2
-  Build Date UTC : 2017-06-14 01:33:09
+  Build Date UTC : 2017-10-02 05:33:11
   -->
   </body>
 </html>

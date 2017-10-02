@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     
-    <title>Style guide - elections-carousel</title>
+    <title>Parameters - elections-carousel</title>
            
         <meta name="description" content="Documentation for elections-carousel JavaScript library. Includes quick start guide, developer guide, style guide and more...">
         <meta name="author" content="Heini Fagerlund">
@@ -58,7 +58,7 @@
         <li class="nav-main__item nav-main__item--current" role="menuitem">
           
                                
-              <a class="nav-main__link" href="../parameters/"> Developer Guide</a>
+              <a class="nav-main__link nav-main__link--current" href="./"><span class="visually-hidden">Current: </span>  Developer Guide</a>
             
           
             
@@ -100,8 +100,6 @@
         
         
           
-        
-          
             <aside class="section-toc" role="complementary" aria-label="Table of Contents for this section">
             <ul>
   
@@ -111,11 +109,11 @@
       
         
           
-            <li class="section-toc__item"><a href="../parameters/" class="section-toc__link">Parameters</a></li>
+            <li class="section-toc__item section-toc__item--active"><a href="./" class="section-toc__link section-toc__link--active"><span class="visually-hidden">Current: </span> Parameters</a></li>
           
         
           
-            <li class="section-toc__item section-toc__item--active"><a href="./" class="section-toc__link section-toc__link--active"><span class="visually-hidden">Current: </span> Style guide</a></li>
+            <li class="section-toc__item"><a href="../style-guide/" class="section-toc__link">Style guide</a></li>
           
         
           
@@ -140,6 +138,8 @@
         
           
         
+          
+        
       
     
       
@@ -157,26 +157,81 @@
     
    
      <main id="maincontent" role="main">
-      <h1 id="style-guide">Style guide</h1>
-<h2 id="naming-conventions">Naming conventions</h2>
-<h3 id="functions-methods">Functions, Methods</h3>
-<p>Camel case starting with lowercase letter. Private method names prefixed with '_' (underscore).</p>
-<p><strong>Example - Private method:</strong></p>
-<pre><code>function _doSomething(foo) {
-    //...
-}
+      <h1 id="parameters">Parameters</h1>
+<p>The following carousel features can be (optionally) customized:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type<br><a id="default" name="default">(Default value)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>url</strong></td>
+<td>url<br><em>(default value: http://127.0.0.1:8080/src/assets/fixtures/results.js)</em></td>
+<td>The URL for the (JSON) data feed</td>
+</tr>
+<tr>
+<td><strong>callback</strong></td>
+<td><code>string</code><br><em>(default value: gNews_getRidingDetailsCallback)</em></td>
+<td>The JSON-P callback function name</td>
+</tr>
+<tr>
+<td><strong>headingtext</strong></td>
+<td><code>string</code><br><em>(default value: 2011 Election Results)</em></td>
+<td>The text content of the <code>&lt;h1&gt;&lt;/h1&gt;</code> tags</td>
+</tr>
+<tr>
+<td><strong>slidewidth</strong></td>
+<td><code>int</code><br><em>(default value: 600)</em></td>
+<td>The width (in <strong>px</strong>) of each riding 'slide'</td>
+</tr>
+<tr>
+<td><strong>templateid</strong></td>
+<td><code>string</code><br><em>(default value: #viewTemplate)</em></td>
+<td>The template identifier (ie. within the <strong>template file</strong> - refer to <a href="https://hfagerlund.github.io/elections-carousel/developer-guide/parameters/#templatepath">templatepath</a>)</td>
+</tr>
+<tr>
+<td><a id="templatepath" name="templatepath"><strong>templatepath</strong></a></td>
+<td>path<br><em>(default value: http://127.0.0.1:8080/src/assets/templates/viewFull.mustache)</em></td>
+<td>The full (absolute) path to the Mustache template file</td>
+</tr>
+<tr>
+<td><strong>transitiontime</strong></td>
+<td><code>int</code><br><em>(default value: 300)</em></td>
+<td>The time span (in <strong>milliseconds</strong>) for carousel slide movement/rotation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="initialization">Initialization:</h2>
+<h3 id="no-arguments">No arguments:</h3>
+<p>If no arguments are provided when it is initialized, the module will run using its <strong>default values</strong>.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="javascript">ElectionsCarousel.init({});
 </code></pre>
 
-<h3 id="modules">Modules</h3>
-<p>Camel case starting with uppercase letter.</p>
-<h3 id="variables">Variables</h3>
-<p>Camel case starting with lowercase letter.</p>
+<p>is equivalent to:</p>
+<pre><code class="javascript">ElectionsCarousel.init({
+                url            :'http://127.0.0.1:8080/src/assets/fixtures/results.js',
+                callback       :'gNews_getRidingDetailsCallback',
+                headingtext    : '2011 Election Results',
+                slidewidth     : 600,
+        templateid     : '#viewTemplate',
+        templatepath   : 'http://127.0.0.1:8080/src/assets/templates/viewFull.mustache',
+        transitiontime : 300
+              });
+</code></pre>
+
 <hr />
-<h2 id="linting">Linting</h2>
-<p>Refer to <a href="https://github.com/hfagerlund/elections-carousel/blob/master/.eslintrc">.eslintrc</a> .</p>
-<h2 id="spacing">Spacing</h2>
-<p>2 spaces for indentation. No whitespace at EOL.</p>
-<p>Refer to <a href="https://github.com/hfagerlund/elections-carousel/blob/master/.editorconfig">.editconfig</a> .</p>
+<h3 id="overriding-a-selected-parameters-default-value">Overriding a selected parameter's default value:</h3>
+<p><strong>Example</strong>: Initialize the module with an explicit <strong>transitiontime</strong> value of 100 msec in order to override the default (of 300 msec) as follows:</p>
+<pre><code class="javascript">ElectionsCarousel.init({transitiontime: 100});
+</code></pre>
+
+<p>(NOTE: <a href="https://hfagerlund.github.io/elections-carousel/developer-guide/parameters/#default">Default values</a> will be used for all other unspecified parameters.)</p>
      </main>
 
      <aside id="page-toc" class="page-toc" role="complementary" aria-label="Table of Contents for this page">
@@ -184,13 +239,9 @@
        <h2 class="page-toc__heading">On this Page:</h2>
 <ul>
 
-    <li class="page-toc__item"><a href="#style-guide" class="page-toc__link" tabindex="0">Style guide</a></li>
+    <li class="page-toc__item"><a href="#parameters" class="page-toc__link" tabindex="0">Parameters</a></li>
     
-        <li class="page-toc__item"><a href="#naming-conventions" class="page-toc__link" tabindex="0">Naming conventions</a></li>
-    
-        <li class="page-toc__item"><a href="#linting" class="page-toc__link" tabindex="0">Linting</a></li>
-    
-        <li class="page-toc__item"><a href="#spacing" class="page-toc__link" tabindex="0">Spacing</a></li>
+        <li class="page-toc__item"><a href="#initialization" class="page-toc__link" tabindex="0">Initialization:</a></li>
     
 
 </ul>
@@ -200,10 +251,10 @@
 
    
      
-      <a href="../parameters/" class="maincontent__link maincontent__link--previous-page">Previous: Parameters</a>
+      <a href="../.." class="maincontent__link maincontent__link--previous-page">Previous: Intro</a>
     
     
-      <a href="../usage/" class="maincontent__link maincontent__link--next-page">Next: Usage</a>
+      <a href="../style-guide/" class="maincontent__link maincontent__link--next-page">Next: Style guide</a>
     
    
 

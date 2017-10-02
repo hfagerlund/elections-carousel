@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     
-    <title>Style guide - elections-carousel</title>
+    <title>Usage - elections-carousel</title>
            
         <meta name="description" content="Documentation for elections-carousel JavaScript library. Includes quick start guide, developer guide, style guide and more...">
         <meta name="author" content="Heini Fagerlund">
@@ -102,6 +102,8 @@
           
         
           
+        
+          
             <aside class="section-toc" role="complementary" aria-label="Table of Contents for this section">
             <ul>
   
@@ -115,11 +117,11 @@
           
         
           
-            <li class="section-toc__item section-toc__item--active"><a href="./" class="section-toc__link section-toc__link--active"><span class="visually-hidden">Current: </span> Style guide</a></li>
+            <li class="section-toc__item"><a href="../style-guide/" class="section-toc__link">Style guide</a></li>
           
         
           
-            <li class="section-toc__item"><a href="../usage/" class="section-toc__link">Usage</a></li>
+            <li class="section-toc__item section-toc__item--active"><a href="./" class="section-toc__link section-toc__link--active"><span class="visually-hidden">Current: </span> Usage</a></li>
           
         
       
@@ -136,8 +138,6 @@
 </ul>
 
             </aside>
-          
-        
           
         
       
@@ -157,26 +157,72 @@
     
    
      <main id="maincontent" role="main">
-      <h1 id="style-guide">Style guide</h1>
-<h2 id="naming-conventions">Naming conventions</h2>
-<h3 id="functions-methods">Functions, Methods</h3>
-<p>Camel case starting with lowercase letter. Private method names prefixed with '_' (underscore).</p>
-<p><strong>Example - Private method:</strong></p>
-<pre><code>function _doSomething(foo) {
-    //...
-}
+      <h1 id="usage">Usage</h1>
+<h2 id="adding-to-a-page">Adding to a page:</h2>
+<p>Refer to the included elections.html for an example page.</p>
+<ul>
+<li><strong>HTML</strong>: Add the 'class' attribute values of <code>ec ec-results</code> to an element in the markup:</li>
+</ul>
+<pre><code class="html">&lt;div class=&quot;ec ec-results&quot;&gt;
 </code></pre>
 
-<h3 id="modules">Modules</h3>
-<p>Camel case starting with uppercase letter.</p>
-<h3 id="variables">Variables</h3>
-<p>Camel case starting with lowercase letter.</p>
-<hr />
-<h2 id="linting">Linting</h2>
-<p>Refer to <a href="https://github.com/hfagerlund/elections-carousel/blob/master/.eslintrc">.eslintrc</a> .</p>
-<h2 id="spacing">Spacing</h2>
-<p>2 spaces for indentation. No whitespace at EOL.</p>
-<p>Refer to <a href="https://github.com/hfagerlund/elections-carousel/blob/master/.editorconfig">.editconfig</a> .</p>
+<p>(Shown here applied to a <em>div</em>, but may be applied to any element - for example: <em>article</em> or whatever is semantically required.)</p>
+<ul>
+<li><strong>CSS</strong>: Add the (bundled) stylesheet found in the project's <strong>/dist/css</strong> directory to the <head> section of the page using:</li>
+</ul>
+<pre><code class="html">&lt;link href=&quot;&lt;path-to-your-page&gt;/dist/css/main-&lt;dynamic-bundle-hash&gt;.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+</code></pre>
+
+<p>making the appropriate modifications to the <em>'path-to-your-page'</em> and <em>'dynamic-bundle-hash'</em> values.</p>
+<ul>
+<li><strong>JS</strong>: Add the (bundled) script found in the project's <strong>/dist/js</strong> directory above the </body> tag on the page using:</li>
+</ul>
+<pre><code class="html">&lt;script src=&quot;&lt;path-to-your-page&gt;/dist/js/main-&lt;dynamic-bundle-hash&gt;.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>making the appropriate modifications to the <em>'path-to-your-page'</em> and <em>'dynamic-bundle-hash'</em> values.</p>
+<ul>
+<li><strong>Initialize the module</strong>: Initialize the ElectionsCarousel module (adding any <a href="https://hfagerlund.github.io/elections-carousel/developer-guide/parameters/">optional parameters</a>) as follows:</li>
+</ul>
+<pre><code class="javascript">var ecarousel = require('./elections-carousel');
+ecarousel.init({});
+</code></pre>
+
+<h2 id="running-the-build">Running the build:</h2>
+<h3 id="automatic-bundle-hash-updates">Automatic bundle hash updates:</h3>
+<p>Running the build ($ npm run build:production) will <em>automatically</em> update both the CSS and JavaScript bundle hashes on the (included) <strong>elections.html</strong> page. </p>
+<p>Edit get-bundle-hash.sh to change the page to '<em>your-custom-page-name</em>.html'.</p>
+<h2 id="keyboard-support">Keyboard support:</h2>
+<p>To use the carousel controls via the keyboard:</p>
+<ul>
+<li>Press the <strong>Tab</strong> key once -&gt; the 'Back' control will have focus, ie. 'Back' is selected. (<em>NOTE</em>: The 'Back' control is not initially enabled, therefore proceed to the next step to select the 'Next' control).</li>
+<li>
+<p>Press the <strong>Tab</strong> key again -&gt; the 'Next' control will have focus.</p>
+</li>
+<li>
+<p><strong>To move the carousel 'cards'/slides forward</strong>, press the <strong>Enter</strong> key. (This is equivalent to a mouse-click on the 'Next' control). </p>
+</li>
+<li>
+<p>Repeat as many times as desired to scroll through the riding 'cards'/slides.</p>
+</li>
+<li>
+<p><strong>To move the riding 'cards'/slides backwards</strong>, press the <strong>Shift and Tab</strong> keys simultaneously to switch focus to the 'Back' control. Press the <strong>Enter</strong> key to activate the 'Back' control.</p>
+</li>
+</ul>
+<h2 id="running-the-unit-tests">Running the Unit Tests</h2>
+<h3 id="on-the-command-line">On the command line:</h3>
+<p>Run all (Tape) tests, and read the results, on the command line using the following:</p>
+<pre><code>$ npm run test
+</code></pre>
+
+<p>Generate (Istanbul) code coverage reports using:</p>
+<pre><code>$ npm run coverage
+</code></pre>
+
+<h3 id="in-the-browser">In the browser:</h3>
+<p>View (Istanbul) code coverage results in the browser at:</p>
+<pre><code>http://127.0.0.1:8080/coverage/lcov-report/
+</code></pre>
      </main>
 
      <aside id="page-toc" class="page-toc" role="complementary" aria-label="Table of Contents for this page">
@@ -184,13 +230,15 @@
        <h2 class="page-toc__heading">On this Page:</h2>
 <ul>
 
-    <li class="page-toc__item"><a href="#style-guide" class="page-toc__link" tabindex="0">Style guide</a></li>
+    <li class="page-toc__item"><a href="#usage" class="page-toc__link" tabindex="0">Usage</a></li>
     
-        <li class="page-toc__item"><a href="#naming-conventions" class="page-toc__link" tabindex="0">Naming conventions</a></li>
+        <li class="page-toc__item"><a href="#adding-to-a-page" class="page-toc__link" tabindex="0">Adding to a page:</a></li>
     
-        <li class="page-toc__item"><a href="#linting" class="page-toc__link" tabindex="0">Linting</a></li>
+        <li class="page-toc__item"><a href="#running-the-build" class="page-toc__link" tabindex="0">Running the build:</a></li>
     
-        <li class="page-toc__item"><a href="#spacing" class="page-toc__link" tabindex="0">Spacing</a></li>
+        <li class="page-toc__item"><a href="#keyboard-support" class="page-toc__link" tabindex="0">Keyboard support:</a></li>
+    
+        <li class="page-toc__item"><a href="#running-the-unit-tests" class="page-toc__link" tabindex="0">Running the Unit Tests</a></li>
     
 
 </ul>
@@ -200,10 +248,10 @@
 
    
      
-      <a href="../parameters/" class="maincontent__link maincontent__link--previous-page">Previous: Parameters</a>
+      <a href="../style-guide/" class="maincontent__link maincontent__link--previous-page">Previous: Style guide</a>
     
     
-      <a href="../usage/" class="maincontent__link maincontent__link--next-page">Next: Usage</a>
+      <a href="../../about/license/" class="maincontent__link maincontent__link--next-page">Next: License</a>
     
    
 
