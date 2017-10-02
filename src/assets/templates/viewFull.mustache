@@ -1,48 +1,47 @@
 <!--
  * elections-carousel
  * @copyright (c) Heini Fagerlund
- * @version 1.0.0
+ * @version 2.0.0
  * @license MIT
  -->
 
 <template id="viewTemplate">
-    <h1>{{ pageTitle }}</h1>
-        <div class="{{wrapperRidings}}">
+    <h1 class="carousel__heading">{{ headingText }}</h1>
+        <div class="ec-results__wrapper-ridings">
 	    {{#.}}
-            <article id="{{idRiding}}{{id}}" class="riding">
-                <header class="{{ridingHeaderClass}}">
-                    <h2 class="{{ridingHeadingClass}}">Riding of: {{name}}</h2>
+            <article id="art_{{id}}" class="riding">
+                <header class="riding__header">
+                    <h2 class="riding__heading">Riding of: {{name}}</h2>
                 </header>
-                <ol class="{{ridingListClass}}">
+                <ol class="riding__list">
                     {{#results}}
-                    <li class="{{candidateClass}} {{#lower}}{{listCandidateRoot}}{{partyCode}}{{/lower}}{{#winner}} {{ridingWinnerClass}}{{/winner}}">
-                        <span class="{{capitalizeClass}}">{{#ifWon}}{{/ifWon}}</span>
-                        <span class="{{percentageClass}}">
-                            <span class="{{capitalizeClass}}">{{partyCode}}</span>
+                    <li class="riding__list-candidate {{#lower}}riding__list-candidate--{{partyCode}}{{/lower}}{{#winner}} riding__list-candidate--winner{{/winner}}">
+                        {{#ifWon}}<span class="cap">Elected</span>{{/ifWon}}
+                        <span class="percentage">
+                            <span class="cap">{{partyCode}}</span>
                              {{votePercentage}}%
                         </span>
                     </li>
                     {{/results}}
                 </ol>
 
-                <div class="{{ridingTextSummaryClass}}">
+                <div class="riding__textSummary">
                 {{#results}}
-                <p class="{{ridingPointFormClass}}">
-                    <span class="{{labelClass}} {{capitalizeClass}} {{textCandidateRoot}}{{#lower}}{{partyCode}}{{/lower}}{{#winner}} {{ridingWinnerClass}}{{/winner}}"> {{partyCode}} </span>
-                    {{name}} {{#ifElected}}{{/ifElected}} {{votes}} votes ({{votePercentage}}%)
+                <p class="riding__textSummary-candidate{{#winner}} riding__textSummary-candidate--winner{{/winner}}">
+                    <span class="label cap riding__textSummary-candidate--{{#lower}}{{partyCode}}{{/lower}}{{#winner}} riding__textSummary-label--winner{{/winner}}"> {{partyCode}} </span><span class="riding__textSummary-result{{#winner}} riding__textSummary--winner{{/winner}}">{{name}} {{#ifElected}} was elected with{{/ifElected}}{{^ifElected}} received{{/ifElected}} {{votes}} votes ({{votePercentage}}%)</span>
                 </p>
                 {{/results}}
-                <p class="{{ridingVoteTotalClass}}">
+                <p class="riding__textSummary-totalVotes">
                     Total votes for this riding:
-                    <span class="{{strongClass}}">{{#ridingVoteTotal}}{{/ridingVoteTotal}}</span>
+                    <strong>{{ voteTotal }}</strong>
                     votes
                 </p>
                 </div>
             </article>
 	    {{/.}}
         </div>
-        <div class="{{wrapperControls}}">
-          <button disabled="disabled" aria-disabled="true" aria-label="Previous riding" class="ctrl ctrl--back ctrl--disabled" id="ecBack"></button>
-          <button aria-disabled="false" aria-label="Next riding" class="ctrl ctrl--next" id="ecNext"></button>
+        <div class="ec-results__wrapper-controls">
+          <button disabled="disabled" aria-disabled="true" aria-label="Previous riding" class="ctrl ctrl--back ctrl--disabled" data-js="control-back" id="ecBack"></button>
+          <button aria-disabled="false" aria-label="Next riding" class="ctrl ctrl--next" data-js="control-next" id="ecNext"></button>
         </div>
 </template>

@@ -1,29 +1,46 @@
 /*!
  * elections-carousel
  * @copyright (c) Heini Fagerlund
- * @version 1.0.0
+ * @version 2.0.0
  * @license MIT
  */
+
+require('./setup');
 
 var test = require('tape');
 var eCarousel = require('../src/js/elections/elections-carousel.js');
 
 
 test('module loading', function (assert) {
-  assert.plan(1);
+  assert.plan(2);
   assert.ok(eCarousel, 'the module loaded');
+  assert.equal(typeof eCarousel, 'object', 'eCarousel is an object');
 });
 
+test('test callback (without making an Ajax request)', function (assert) {
+  var mockData = {
+			"id": 1,
+			"name": "Annapolis",
+			"num": 1,
+			"pollsReported": 357, //***
+			"pollsTotal": 57,
+			"results": [
+				{
+					"name": "Henry Spurr",
+					"partyId": 13,
+					"votes": 834,
+					"isElected": false,
+					"partyCode": "NDP"
+				}
+			]
+		}
 
-var mocknum1 = 86.5735123;
-var mocknum2 = 2000.92690;
-var mocknum3 = 457.0908765;
+  assert.equal(typeof eCarousel.extendData, 'function', 'eCarousel.extendData (callback function) is a function');
 
-test('rounding up percentage of votes', function (assert) {
-  assert.plan(3);
+  var expectedResult = 357;
+  assert.equal(eCarousel.extendData(mockData), expectedResult, 'extendData produces expected structure');
 
-  assert.equal(eCarousel.prototype.roundToTwoDec(mocknum1), 86.57, 'correct rounding (up) of vote percentage');
-  assert.equal(eCarousel.prototype.roundToTwoDec(mocknum2), 2000.93, 'correct rounding (up) of vote percentage');
-  assert.equal(eCarousel.prototype.roundToTwoDec(mocknum3), 457.09, 'correct rounding (up) of vote percentage');
+
+  assert.end();
 });
 

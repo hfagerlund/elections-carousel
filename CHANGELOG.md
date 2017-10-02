@@ -1,10 +1,29 @@
 # Changelog:
 
 - - -
+## 2.0.0 - 2017-10-02
+#### New features:
+* Enabled more parameters to be user-configurable
+* Added scripts to enable testing (by automating addition of test code blocks to source)
+
+#### Changed:
+* Refactored module methods - improved readability
+* Relocated classnames, text content from script to (Mustache) template - improved separation of concerns
+* Improved usability, look-and-feel:
+  * Repositioned carousel control elements (fixed position, independent of height of slide)
+  * More obvious 'highlighting' of winning candidate information
+  * Realigned layout of text results/'legend' for graphs - easier readability
+* Updated screenshot; added README section on 'Parameters'; added corresponding links to [documentation](https://hfagerlund.github.io/elections-carousel/) for sections relocated from README
+
+#### Known Issues:
+* comment-out.sh adds *multiple* leading forward slashes (issue is currently remedied in uncomment.sh which strips out all leading slashes - TODO: fix this in the comment-out.sh script itself).
+
+- - -
 ## 1.0.1 - 2017-07-08
 #### Fixed:
 * Accessibility:
   * Replaced carousel control elements in template and modified corresponding attributes, behaviour, styling
+
 - - -
 ## 1.0.0 - 2017-04-26
 #### New features:

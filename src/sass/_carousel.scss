@@ -1,43 +1,60 @@
-$ridingWidth:500px;
+$ctrlWidth:50px;
+$ridingWidth:600px;
+
+$black:#000;
+$blue: #99cedb;
+$grey:#999;
+$darkerGrey:#333;
+$darkGrey:#444;
+$lightGrey:#ccc;
+$white:#fff;
 
 .ctrl {
- background-color:#99cedb;
- @include ctrlsize(50px);
- color:#000;
- display:inline-block;
- font-size:2em;
+ background-color:$lightGrey;
+ color:$darkerGrey;
+ display:block;
+ font-size:3em;
  font-weight:bold;
+ height:100%;
  line-height:1.5;
- margin:500px 0 0 100px;
+ margin:0;
  outline:0;
- position:static;
+ position:absolute;
  text-align:center;
  text-decoration:none;
  vertical-align:middle;
- z-index:20000;
+ width:$ctrlWidth
 }
 .ctrl:not([disabled]):hover{
+  background-color:$blue;
+  color:$black;
   cursor:pointer
 }
+.ctrl:not([disabled]):active{
+  background-color:$blue;
+  color:$darkGrey
+}
+
 .ctrl--back{
- float:left;
- margin-left:100px
+ border-right:1px solid $grey;
+ left:0
 }
 .ctrl--next{
- float:right;
- margin-right:120px
+ border-left:1px solid $grey;
+ right:0
 }
 
 .ec-results {
-  border:1px solid #999;
+  border:1px solid $grey;
   width: $ridingWidth;
-  min-height: 550px;
+  min-height: 600px;
   overflow: hidden;
   padding-bottom:2em;
   position: relative;
 }
 
 .ec-results__wrapper-ridings {
+  left:0;
   position: absolute;
   width: 50000px;
 }
@@ -48,4 +65,14 @@ $ridingWidth:500px;
 
 .riding__list-candidate {
  min-height:1em;
+ list-style-type:none
+}
+
+.ec-results__wrapper-controls{
+ height:100%;
+ position:absolute;
+ top:0;
+ vertical-align:top;
+ width:$ridingWidth;
+ z-index:20000;
 }
