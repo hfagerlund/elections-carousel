@@ -2,8 +2,16 @@
 
 a {padding:0.2em}
 
+.carousel__heading{
+ margin:0 0 0.5em 0;
+ padding:0.5em 0 0.5em 2.5em
+}
+
 .label {
- margin-right:0.25em
+ display:inline-table;
+ margin-right:0.25em;
+ padding:0.1em 0.25em;
+ width:3em
 }
 
 .percentage {
@@ -16,16 +24,17 @@ a {padding:0.2em}
 .riding {
  display:inline-table;
  margin:0 0 1em 0;
- padding:1em 0 0 0;
- h2 {
-  margin-left:1em;
- }
+ padding:1em 0 0 0
+}
+
+.riding__heading{
+ margin:0 0 0.5em 3.5em
 }
 
 .riding__list-candidate{
  display:inline-table;
  margin:0;
- padding:0;
+ padding:0.3em 1em;
  position:relative;
  vertical-align:bottom;
  width:80px
@@ -36,11 +45,25 @@ a {padding:0.2em}
 }
 
 .riding__textSummary-candidate{
- margin-left:3em
+ margin-left:5em;
+ width:$ridingWidth - 150;
+}
+
+.riding__textSummary-candidate--winner{
+ padding: 0.25em;
+ width: 72%
+}
+
+.riding__textSummary-result{
+ display:inline-block;
+ line-heght:1;
+ margin-left:1em;
+ vertical-align:top;
+ width:80%
 }
 
 .riding__textSummary-totalVotes{
- margin:0;
+ margin:0 0 0 $ctrlWidth + 10;
  padding:1em 0;
- width:500px
+ width:$ridingWidth - 2 * ($ctrlWidth + 10)
 }

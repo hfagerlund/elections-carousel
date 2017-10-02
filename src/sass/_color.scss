@@ -1,4 +1,5 @@
 $black:#000;
+$darkGrey:#444;
 $white:#fff;
 
 $color_party-lib_red:#f00;
@@ -97,7 +98,15 @@ $color_party-other_grey:#ccc;
   }
 }
 
-.riding__textSummary-totalVotes {
- background-color:$black;
+.riding__textSummary-candidate--winner{
+ background-color:$darkGrey;
  color:$white
+}
+
+.riding__textSummary-label--winner{
+ border:1px solid $white
+}
+
+.riding__textSummary-totalVotes {
+  border-top:2px dotted $black
 }

@@ -1,6 +1,6 @@
 {
   "name": "elections-carousel",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Carousel presentation of data from a JSON feed of election results",
   "main": "./src/js/elections/main.js",
   "devDependencies": {
@@ -44,11 +44,11 @@
     "mustache": "^2.3.0"
   },
   "scripts": {
-    "build:production": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --display-error-details --display-modules --display-chunks && ./get-bundle-hash.sh",
+    "build:production": "./comment-out.sh && NODE_ENV=production ./node_modules/webpack/bin/webpack.js --display-error-details --display-modules --display-chunks && ./get-bundle-hash.sh",
     "coverage": "istanbul cover tape -- test/**/*.test.js",
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint:js": "./node_modules/eslint/bin/eslint.js -c .eslintrc --ext .js src/ webpack.*.js --cache",
-    "test": "node_modules/.bin/tape --require ignore-styles test/**/*.test.js",
+    "test": "./uncomment.sh && node_modules/.bin/tape --require ignore-styles test/**/*.test.js",
     "travis": "npm run lint:js && npm run test",
     "prebuild:js": "npm run lint:js"
   }
