@@ -32,9 +32,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+##---------------------------------
+# REPLACE with your custom page name (default: elections.html)
+htmlPage=elections.html
 
+## do not edit below----------------
 # update JavaScript file references:
-sed -i "s/dist\/js.*\.js/dist\/js\/$(ls dist/js)/g" elections.html
+sed -i "s/dist\/js.*\.js/dist\/js\/$(ls dist/js)/g" $htmlPage
 
 # update CSS file references:
-sed -i "s/dist\/css.*\.css/dist\/css\/$(ls dist/css)/g" elections.html
+sed -i "s/dist\/css.*\.css/dist\/css\/$(ls dist/css)/g" $htmlPage
