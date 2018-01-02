@@ -17,6 +17,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.30.1",
     "http-server": "^0.9.0",
     "ignore-styles": "^5.0.1",
     "istanbul": "^0.4.5",
@@ -44,7 +45,7 @@
     "mustache": "^2.3.0"
   },
   "scripts": {
-    "build:production": "./comment-out.sh && NODE_ENV=production ./node_modules/webpack/bin/webpack.js --display-error-details --display-modules --display-chunks && ./get-bundle-hash.sh",
+    "build:production": "./comment-out.sh && NODE_ENV=production ./node_modules/webpack/bin/webpack.js --display-error-details --display-modules --display-chunks",
     "coverage": "istanbul cover tape -- test/**/*.test.js",
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint:js": "./node_modules/eslint/bin/eslint.js -c .eslintrc --ext .js src/ webpack.*.js --cache",
