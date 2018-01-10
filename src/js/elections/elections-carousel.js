@@ -6,7 +6,7 @@
  * 
  */
 
-////var jQuery = require('jquery'); //TEST_CODE1
+//var jQuery = require('jquery'); //TEST_CODE1
 
 require('../../sass/screen.scss');
 
@@ -247,7 +247,7 @@ var ElectionsCarousel = (function($) {
       transitionTime: transitiontime
     };
     $.extend(data, userDefinedSettings);
-    //    //      return data.pollsReported; //TEST_CODE2
+    //      return data.pollsReported; //TEST_CODE2
     _renderTemplate(data);
   };
 
@@ -306,7 +306,7 @@ var ElectionsCarousel = (function($) {
 
   return {
     init: main
-    //    //    , extendData: extendData //TEST_CODE2
+    //    , extendData: extendData //TEST_CODE2
   };
 })(jQuery);
 
