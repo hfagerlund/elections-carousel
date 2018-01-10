@@ -6,7 +6,7 @@
  * 
  */
 
-//var jQuery = require('jquery'); //TEST_CODE1
+////var jQuery = require('jquery'); //TEST_CODE1
 
 require('../../sass/screen.scss');
 
@@ -199,8 +199,8 @@ var ElectionsCarousel = (function($) {
   };
 
   var _bindCtrlListener = function(events, data) {
+    //jQuery 1.7+
     $(document).on(events, _config.css.control, function(e) {
-      //jQuery 1.7+
       if (e.type === 'click') {
         //Enter key, spacebar, or mouse click
         var whichControl = $(e.target).attr('data-js');
@@ -247,7 +247,7 @@ var ElectionsCarousel = (function($) {
       transitionTime: transitiontime
     };
     $.extend(data, userDefinedSettings);
-    //      return data.pollsReported; //TEST_CODE2
+    //    //      return data.pollsReported; //TEST_CODE2
     _renderTemplate(data);
   };
 
@@ -306,7 +306,7 @@ var ElectionsCarousel = (function($) {
 
   return {
     init: main
-    //    , extendData: extendData //TEST_CODE2
+    //    //    , extendData: extendData //TEST_CODE2
   };
 })(jQuery);
 
