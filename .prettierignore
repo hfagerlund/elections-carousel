@@ -1,0 +1,8 @@
+.prettierignore
+dist/js/**/*
+docs/js/**/*
+docs/mkdocs/js/**/*
+src/assets/fixtures/*
+src/js/vendors/*
+test/**/*
+webpack.config.babel.js
