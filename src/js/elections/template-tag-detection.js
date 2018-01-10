@@ -6,8 +6,8 @@ function supportsTemplate() {
 }
 
 if (supportsTemplate()) {
-  console.log("browser supports HTML5 template tag!");
+  console.log('browser supports HTML5 template tag!');
 } else {
   //use old templating techniques or libraries
-  console.log("NO support for HTML5 template tag in this browser");
+  console.log('NO support for HTML5 template tag in this browser');
 }

@@ -7,4 +7,3 @@
 
 var ecarousel = require('./elections-carousel');
 ecarousel.init({});
-
