@@ -55,7 +55,7 @@
     "format": "./node_modules/prettier/bin/prettier.js ignore-path ./.prettierignore --write '**/*.{js,jsx}'",
     "lint:js": "./node_modules/eslint/bin/eslint.js -c .eslintrc --ext .js src/ webpack.*.js --fix",
     "test": "./uncomment.sh && node_modules/.bin/tape --require ignore-styles test/**/*.test.js",
-    "travis": "npm run lint:js && npm run test",
-    "prebuild:production": "./comment-out.sh && npm run format && npm run lint:js"
+    "travis": "yarn run lint:js && yarn run test",
+    "prebuild:production": "./comment-out.sh && yarn run format && yarn run lint:js"
   }
 }
