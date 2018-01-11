@@ -1,11 +1,11 @@
 sudo: false
 language: node_js
 node_js:
-  - "7.2.1"
+  - "8.0.0"
 before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 install:
-  - npm install
-  - npm install -g http-server
+  - yarn
+  - yarn global add http-server
 before_script:
   - http-server &
-script: npm run travis
+script: yarn run travis

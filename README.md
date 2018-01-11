@@ -21,6 +21,7 @@ Refer to the [documentation](https://hfagerlund.github.io/elections-carousel/) f
   - Mustache
   - Tape
   - SASS
+- [Yarn](https://github.com/yarnpkg/yarn)
 
 (All copyrights for the above remain with their respective owners.)
 
@@ -33,7 +34,7 @@ Refer to the [documentation](https://hfagerlund.github.io/elections-carousel/) f
 $ git clone https://github.com/hfagerlund/elections-carousel.git
 
 # install dependencies
-$ npm install
+$ yarn
 
 # launch local server (for data feed)
 $ http-server
@@ -106,7 +107,7 @@ ElectionsCarousel.init({transitiontime: 100});
 Run all (Tape) tests, and read the results, on the command line using the following:
 
 ```
-$ npm run test
+$ yarn run test
 
 ```
 
