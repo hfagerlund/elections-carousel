@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Introduction\n\n\nWelcome to the documentation site for \nelections-carousel\n: a JavaScript library for a carousel-style presentation of data from a JSON feed of election results.\n\n\nThe \nelections-carousel\n project repository is available \non GitHub\n.\n\n\n\n\nFeatures\n\n\n\n\nAutomatic \nbundle hash updates\n;\n\n\nCustomizable\n;\n\n\nModular (UMD support);\n\n\nKeyboard support\n.\n\n\n\n\nQuick Start\n\n\n$ git clone https://github.com/hfagerlund/elections-carousel.git\n$ npm install\n$ http-server\n# browse to http://127.0.0.1:8080/elections.html\n\n\n\n\n\nRefer to \nusage\n for more details.\n\n\nProject layout\n\n\ncoverage/          # (Istanbul) code coverage reports\ndist/              # production-ready (minified,concatenated,transpiled) files\n    css/           # compiled CSS (.css) files\n    js/            # compiled JS (.js) files\ndocs/              # documentation\nnode_modules/      # **npm** package(s)/files\nscreenshots/       # screenshots of the **elections-carousel** project\nsrc/               # all project source code\n    assets/        # additional project files\n        fixtures/  # local version of the sample JSON election results feed\n        templates  # (Mustache) template files\n    js/            # scripts\n        elections/ # elections-carousel scripts (unminified)\n        vendors/   # third-party scripts - eg. Google fonts\n    sass/          # SASS (.scss) files\ntest/              # (Tape) test files", 
+            "text": "Introduction\n\n\nWelcome to the documentation site for \nelections-carousel\n: a JavaScript library for a carousel-style presentation of data from a JSON feed of election results.\n\n\nThe \nelections-carousel\n project repository is available \non GitHub\n.\n\n\n\n\nFeatures\n\n\n\n\nAutomatic \nbundle hash updates\n;\n\n\nCustomizable\n;\n\n\nModular (UMD support);\n\n\nKeyboard support\n.\n\n\n\n\nQuick Start\n\n\n$ git clone https://github.com/hfagerlund/elections-carousel.git\n$ yarn\n$ http-server\n# browse to http://127.0.0.1:8080/elections.html\n\n\n\n\n\nRefer to \nusage\n for more details.\n\n\nProject layout\n\n\ncoverage/          # (Istanbul) code coverage reports\ndist/              # production-ready (minified,concatenated,transpiled) files\n    css/           # compiled CSS (.css) files\n    js/            # compiled JS (.js) files\ndocs/              # documentation\nnode_modules/      # **npm** package(s)/files\nscreenshots/       # screenshots of the **elections-carousel** project\nsrc/               # all project source code\n    assets/        # additional project files\n        fixtures/  # local version of the sample JSON election results feed\n        templates  # (Mustache) template files\n    js/            # scripts\n        elections/ # elections-carousel scripts (unminified)\n        vendors/   # third-party scripts - eg. Google fonts\n    sass/          # SASS (.scss) files\ntest/              # (Tape) test files", 
             "title": "Intro"
         }, 
         {
@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/#quick-start", 
-            "text": "$ git clone https://github.com/hfagerlund/elections-carousel.git\n$ npm install\n$ http-server\n# browse to http://127.0.0.1:8080/elections.html  Refer to  usage  for more details.", 
+            "text": "$ git clone https://github.com/hfagerlund/elections-carousel.git\n$ yarn\n$ http-server\n# browse to http://127.0.0.1:8080/elections.html  Refer to  usage  for more details.", 
             "title": "Quick Start"
         }, 
         {
@@ -92,7 +92,7 @@
         }, 
         {
             "location": "/developer-guide/usage/", 
-            "text": "Usage\n\n\nAdding to a page:\n\n\nRefer to the included elections.html for an example page.\n\n\n\n\nHTML\n: Add the 'class' attribute values of \nec ec-results\n to an element in the markup:\n\n\n\n\ndiv class=\nec ec-results\n\n\n\n\n\n(Shown here applied to a \ndiv\n, but may be applied to any element - for example: \narticle\n or whatever is semantically required.)\n\n\n\n\nCSS\n: Add the (bundled) stylesheet found in the project's \n/dist/css\n directory to the \n section of the page using:\n\n\n\n\nlink href=\npath-to-your-page\n/dist/css/main-\ndynamic-bundle-hash\n.css\n media=\nall\n rel=\nstylesheet\n type=\ntext/css\n /\n\n\n\n\n\nmaking the appropriate modifications to the \n'path-to-your-page'\n and \n'dynamic-bundle-hash'\n values.\n\n\n\n\nJS\n: Add the (bundled) script found in the project's \n/dist/js\n directory above the \n tag on the page using:\n\n\n\n\nscript src=\npath-to-your-page\n/dist/js/main-\ndynamic-bundle-hash\n.js\n/script\n\n\n\n\n\nmaking the appropriate modifications to the \n'path-to-your-page'\n and \n'dynamic-bundle-hash'\n values.\n\n\n\n\nInitialize the module\n: Initialize the ElectionsCarousel module (adding any \noptional parameters\n) as follows:\n\n\n\n\nvar ecarousel = require('./elections-carousel');\necarousel.init({});\n\n\n\n\nRunning the build:\n\n\nAutomatic bundle hash updates:\n\n\nRunning the build ($ npm run build:production) will \nautomatically\n update both the CSS and JavaScript bundle hashes on the (included) \nelections.html\n page. \n\n\nEdit get-bundle-hash.sh to change the page to '\nyour-custom-page-name\n.html'.\n\n\nKeyboard support:\n\n\nTo use the carousel controls via the keyboard:\n\n\n\n\nPress the \nTab\n key once -\n the 'Back' control will have focus, ie. 'Back' is selected. (\nNOTE\n: The 'Back' control is not initially enabled, therefore proceed to the next step to select the 'Next' control).\n\n\n\n\nPress the \nTab\n key again -\n the 'Next' control will have focus.\n\n\n\n\n\n\nTo move the carousel 'cards'/slides forward\n, press the \nEnter\n key. (This is equivalent to a mouse-click on the 'Next' control). \n\n\n\n\n\n\nRepeat as many times as desired to scroll through the riding 'cards'/slides.\n\n\n\n\n\n\nTo move the riding 'cards'/slides backwards\n, press the \nShift and Tab\n keys simultaneously to switch focus to the 'Back' control. Press the \nEnter\n key to activate the 'Back' control.\n\n\n\n\n\n\nRunning the Unit Tests\n\n\nOn the command line:\n\n\nRun all (Tape) tests, and read the results, on the command line using the following:\n\n\n$ npm run test\n\n\n\n\nGenerate (Istanbul) code coverage reports using:\n\n\n$ npm run coverage\n\n\n\n\nIn the browser:\n\n\nView (Istanbul) code coverage results in the browser at:\n\n\nhttp://127.0.0.1:8080/coverage/lcov-report/", 
+            "text": "Usage\n\n\nAdding to a page:\n\n\nRefer to the included elections.html for an example page.\n\n\n\n\nHTML\n: Add the 'class' attribute values of \nec ec-results\n to an element in the markup:\n\n\n\n\ndiv class=\nec ec-results\n\n\n\n\n\n(Shown here applied to a \ndiv\n, but may be applied to any element - for example: \narticle\n or whatever is semantically required.)\n\n\n\n\nCSS\n: Add the (bundled) stylesheet found in the project's \n/dist/css\n directory to the \n section of the page using:\n\n\n\n\nlink href=\npath-to-your-page\n/dist/css/main-\ndynamic-bundle-hash\n.css\n media=\nall\n rel=\nstylesheet\n type=\ntext/css\n /\n\n\n\n\n\nmaking the appropriate modifications to the \n'path-to-your-page'\n and \n'dynamic-bundle-hash'\n values.\n\n\n\n\nJS\n: Add the (bundled) script found in the project's \n/dist/js\n directory above the \n tag on the page using:\n\n\n\n\nscript src=\npath-to-your-page\n/dist/js/main-\ndynamic-bundle-hash\n.js\n/script\n\n\n\n\n\nmaking the appropriate modifications to the \n'path-to-your-page'\n and \n'dynamic-bundle-hash'\n values.\n\n\n\n\nInitialize the module\n: Initialize the ElectionsCarousel module (adding any \noptional parameters\n) as follows:\n\n\n\n\nvar ecarousel = require('./elections-carousel');\necarousel.init({});\n\n\n\n\nRunning the build:\n\n\nAutomatic bundle hash updates:\n\n\nRunning the build ($ yarn run build:production) will \nautomatically\n update both the CSS and JavaScript bundle hashes on the (included) \nelections.html\n page. \n\n\nEdit get-bundle-hash.sh to change the page to '\nyour-custom-page-name\n.html'.\n\n\nKeyboard support:\n\n\nTo use the carousel controls via the keyboard:\n\n\n\n\nPress the \nTab\n key once -\n the 'Back' control will have focus, ie. 'Back' is selected. (\nNOTE\n: The 'Back' control is not initially enabled, therefore proceed to the next step to select the 'Next' control).\n\n\n\n\nPress the \nTab\n key again -\n the 'Next' control will have focus.\n\n\n\n\n\n\nTo move the carousel 'cards'/slides forward\n, press the \nEnter\n key. (This is equivalent to a mouse-click on the 'Next' control). \n\n\n\n\n\n\nRepeat as many times as desired to scroll through the riding 'cards'/slides.\n\n\n\n\n\n\nTo move the riding 'cards'/slides backwards\n, press the \nShift and Tab\n keys simultaneously to switch focus to the 'Back' control. Press the \nEnter\n key to activate the 'Back' control.\n\n\n\n\n\n\nRunning the Unit Tests\n\n\nOn the command line:\n\n\nRun all (Tape) tests, and read the results, on the command line using the following:\n\n\n$ yarn run test\n\n\n\n\nGenerate (Istanbul) code coverage reports using:\n\n\n$ yarn run coverage\n\n\n\n\nIn the browser:\n\n\nView (Istanbul) code coverage results in the browser at:\n\n\nhttp://127.0.0.1:8080/coverage/lcov-report/", 
             "title": "Usage"
         }, 
         {
@@ -112,7 +112,7 @@
         }, 
         {
             "location": "/developer-guide/usage/#automatic-bundle-hash-updates", 
-            "text": "Running the build ($ npm run build:production) will  automatically  update both the CSS and JavaScript bundle hashes on the (included)  elections.html  page.   Edit get-bundle-hash.sh to change the page to ' your-custom-page-name .html'.", 
+            "text": "Running the build ($ yarn run build:production) will  automatically  update both the CSS and JavaScript bundle hashes on the (included)  elections.html  page.   Edit get-bundle-hash.sh to change the page to ' your-custom-page-name .html'.", 
             "title": "Automatic bundle hash updates:"
         }, 
         {
@@ -127,7 +127,7 @@
         }, 
         {
             "location": "/developer-guide/usage/#on-the-command-line", 
-            "text": "Run all (Tape) tests, and read the results, on the command line using the following:  $ npm run test  Generate (Istanbul) code coverage reports using:  $ npm run coverage", 
+            "text": "Run all (Tape) tests, and read the results, on the command line using the following:  $ yarn run test  Generate (Istanbul) code coverage reports using:  $ yarn run coverage", 
             "title": "On the command line:"
         }, 
         {
@@ -147,7 +147,7 @@
         }, 
         {
             "location": "/about/release-notes/", 
-            "text": "Release notes\n\n\nLinks to all release notes are also \nlisted under 'Tags'\n in the \nelections-carousel\n repository.\n\n\n\n\nRelated reference: \nCHANGELOG\n\n\n\n\n\n\nv2.0.0\n\n\n(Oct 2, 2017)\n\n\nNew features:\n\n\n\n\nAdditional user-configurable parameters\n\n\nAdded 'Parameters' section to documentation\n\n\nAutomated addition and removal of test code blocks\n\n\n\n\nChanged:\n\n\n\n\nRefactored module for improved readability, separation of concerns\n\n\nNew look-and-feel for improved usability\n\n\n\n\n\n\nv1.0.1\n\n\n(Jul 8, 2017)\n\n\nFixed:\n\n\n\n\nAccessibility bug: replaced carousel control elements\n\n\n\n\n\n\nv1.0.0\n\n\n(Apr 26, 2017)\n\n\nNew Features:\n\n\n\n\nLaunched \nproject documentation site\n\n\nNew architecture (includes UMD support)\n\n\nClient-side templating (Mustache)\n\n\nAdded custom script to automate updating of dynamic chunkhash values from (CSS/JS) bundler in demo page\n\n\nAdded .editorconfig\n\n\nIntegrated with Travis\n\n\nCHANGELOG separated from README\n\n\n\n\nChanged:\n\n\n\n\nModified build toolchain (added Webpack; removed Grunt, Bower)\n\n\nReplaced QUnit test harness with TAPE (to support Node as well as browser)\n\n\nRevised CSS naming conventions\n\n\nModified JS linting (replaced JSHint with ESLint)\n\n\n\n\nFixed:\n\n\n\n\nAccessibility compliance, keyboard support for button controls\n\n\nButton controls 'jumping' on press/release bug\n\n\n\n\n\n\nv0.4.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nNew look-and-feel (GUI improvements)\n\n\nswitched from horizontal to vertical bars\n\n\nheight of bars provides visualization of percentage of votes per candidate\n\n\n\n\n\n\nstyling improvements: font updates, gradients, party 'labels' (included in list format), emphasized riding vote totals\n\n\n(minor) text copy changes\n\n\n\n\nChanged:\n\n\n\n\nimproved alphabetical ordering of styling rules\n\n\nupdated copyrights\n\n\nremoved unnecessary role attributes\n\n\nbumped version number\n\n\nupdated README (Changelog, screenshot)\n\n\n\n\n\n\nv0.3.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nReordered results: candidates within each riding now listed in descending order by number of votes\n\n\n\n\n\n\nv0.2.1\n\n\n(Dec 14, 2015)\n\n\nFixed:\n\n\n\n\nRemoved deprecated code\n\n\n\n\n\n\nv0.2.0\n\n\n(Dec 14, 2015)\n\n\nNew features:\n\n\n\n\nDefined global, read-only variables (JSHint strict mode)\n\n\nAutomated package management\n\n\n\n\nChanged:\n\n\n\n\nRefactored code, performance improvements\n\n\nImproved vote percentages (to 2 decimal places; totals 100%)\n\n\nAccessibility enhancement: 'Elected' text rendering\n\n\n\n\nFixed:\n\n\n\n\nButton (enabled/disabled) state bugs\n\n\n\n\n\n\nv0.1.1\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nEnhanced button states\n\n\n\n\n\n\nv0.1.0\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nInitial version", 
+            "text": "Release notes\n\n\nLinks to all release notes are also \nlisted under 'Tags'\n in the \nelections-carousel\n repository.\n\n\n\n\nRelated reference: \nCHANGELOG\n\n\n\n\n\n\nUnreleased (v2.1.0)\n\n\n(last updated: Jan 14, 2018)\n\n\nNew features:\n\n\n\n\nToolchain / workflow improvements: \n\n\nAutomated code formatting (Prettier); \n\n\nIntegrated bundle hash updates (HTML Webpack Plugin); \n\n\nImproved dependency management (Yarn); \n\n\n(Travis) Node version upgrade (from 7 to 8).\n\n\n\n\n\n\nv2.0.0\n\n\n(Oct 2, 2017)\n\n\nNew features:\n\n\n\n\nAdditional user-configurable parameters\n\n\nAdded 'Parameters' section to documentation\n\n\nAutomated addition and removal of test code blocks\n\n\n\n\nChanged:\n\n\n\n\nRefactored module for improved readability, separation of concerns\n\n\nNew look-and-feel for improved usability\n\n\n\n\n\n\nv1.0.1\n\n\n(Jul 8, 2017)\n\n\nFixed:\n\n\n\n\nAccessibility bug: replaced carousel control elements\n\n\n\n\n\n\nv1.0.0\n\n\n(Apr 26, 2017)\n\n\nNew Features:\n\n\n\n\nLaunched \nproject documentation site\n\n\nNew architecture (includes UMD support)\n\n\nClient-side templating (Mustache)\n\n\nAdded custom script to automate updating of dynamic chunkhash values from (CSS/JS) bundler in demo page\n\n\nAdded .editorconfig\n\n\nIntegrated with Travis\n\n\nCHANGELOG separated from README\n\n\n\n\nChanged:\n\n\n\n\nModified build toolchain (added Webpack; removed Grunt, Bower)\n\n\nReplaced QUnit test harness with TAPE (to support Node as well as browser)\n\n\nRevised CSS naming conventions\n\n\nModified JS linting (replaced JSHint with ESLint)\n\n\n\n\nFixed:\n\n\n\n\nAccessibility compliance, keyboard support for button controls\n\n\nButton controls 'jumping' on press/release bug\n\n\n\n\n\n\nv0.4.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nNew look-and-feel (GUI improvements)\n\n\nswitched from horizontal to vertical bars\n\n\nheight of bars provides visualization of percentage of votes per candidate\n\n\n\n\n\n\nstyling improvements: font updates, gradients, party 'labels' (included in list format), emphasized riding vote totals\n\n\n(minor) text copy changes\n\n\n\n\nChanged:\n\n\n\n\nimproved alphabetical ordering of styling rules\n\n\nupdated copyrights\n\n\nremoved unnecessary role attributes\n\n\nbumped version number\n\n\nupdated README (Changelog, screenshot)\n\n\n\n\n\n\nv0.3.0\n\n\n(Jan 13, 2016)\n\n\nNew Features:\n\n\n\n\nReordered results: candidates within each riding now listed in descending order by number of votes\n\n\n\n\n\n\nv0.2.1\n\n\n(Dec 14, 2015)\n\n\nFixed:\n\n\n\n\nRemoved deprecated code\n\n\n\n\n\n\nv0.2.0\n\n\n(Dec 14, 2015)\n\n\nNew features:\n\n\n\n\nDefined global, read-only variables (JSHint strict mode)\n\n\nAutomated package management\n\n\n\n\nChanged:\n\n\n\n\nRefactored code, performance improvements\n\n\nImproved vote percentages (to 2 decimal places; totals 100%)\n\n\nAccessibility enhancement: 'Elected' text rendering\n\n\n\n\nFixed:\n\n\n\n\nButton (enabled/disabled) state bugs\n\n\n\n\n\n\nv0.1.1\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nEnhanced button states\n\n\n\n\n\n\nv0.1.0\n\n\n(Jul 5, 2015)\n\n\nNew features:\n\n\n\n\nInitial version", 
             "title": "Release Notes"
         }, 
         {
@@ -156,12 +156,22 @@
             "title": "Release notes"
         }, 
         {
+            "location": "/about/release-notes/#unreleased-v210", 
+            "text": "(last updated: Jan 14, 2018)", 
+            "title": "Unreleased (v2.1.0)"
+        }, 
+        {
+            "location": "/about/release-notes/#new-features", 
+            "text": "Toolchain / workflow improvements:   Automated code formatting (Prettier);   Integrated bundle hash updates (HTML Webpack Plugin);   Improved dependency management (Yarn);   (Travis) Node version upgrade (from 7 to 8).", 
+            "title": "New features:"
+        }, 
+        {
             "location": "/about/release-notes/#v200", 
             "text": "(Oct 2, 2017)", 
             "title": "v2.0.0"
         }, 
         {
-            "location": "/about/release-notes/#new-features", 
+            "location": "/about/release-notes/#new-features_1", 
             "text": "Additional user-configurable parameters  Added 'Parameters' section to documentation  Automated addition and removal of test code blocks", 
             "title": "New features:"
         }, 
@@ -186,7 +196,7 @@
             "title": "v1.0.0"
         }, 
         {
-            "location": "/about/release-notes/#new-features_1", 
+            "location": "/about/release-notes/#new-features_2", 
             "text": "Launched  project documentation site  New architecture (includes UMD support)  Client-side templating (Mustache)  Added custom script to automate updating of dynamic chunkhash values from (CSS/JS) bundler in demo page  Added .editorconfig  Integrated with Travis  CHANGELOG separated from README", 
             "title": "New Features:"
         }, 
@@ -206,7 +216,7 @@
             "title": "v0.4.0"
         }, 
         {
-            "location": "/about/release-notes/#new-features_2", 
+            "location": "/about/release-notes/#new-features_3", 
             "text": "New look-and-feel (GUI improvements)  switched from horizontal to vertical bars  height of bars provides visualization of percentage of votes per candidate    styling improvements: font updates, gradients, party 'labels' (included in list format), emphasized riding vote totals  (minor) text copy changes", 
             "title": "New Features:"
         }, 
@@ -221,7 +231,7 @@
             "title": "v0.3.0"
         }, 
         {
-            "location": "/about/release-notes/#new-features_3", 
+            "location": "/about/release-notes/#new-features_4", 
             "text": "Reordered results: candidates within each riding now listed in descending order by number of votes", 
             "title": "New Features:"
         }, 
@@ -241,7 +251,7 @@
             "title": "v0.2.0"
         }, 
         {
-            "location": "/about/release-notes/#new-features_4", 
+            "location": "/about/release-notes/#new-features_5", 
             "text": "Defined global, read-only variables (JSHint strict mode)  Automated package management", 
             "title": "New features:"
         }, 
@@ -261,7 +271,7 @@
             "title": "v0.1.1"
         }, 
         {
-            "location": "/about/release-notes/#new-features_5", 
+            "location": "/about/release-notes/#new-features_6", 
             "text": "Enhanced button states", 
             "title": "New features:"
         }, 
@@ -271,7 +281,7 @@
             "title": "v0.1.0"
         }, 
         {
-            "location": "/about/release-notes/#new-features_6", 
+            "location": "/about/release-notes/#new-features_7", 
             "text": "Initial version", 
             "title": "New features:"
         }

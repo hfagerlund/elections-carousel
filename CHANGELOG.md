@@ -1,6 +1,17 @@
 # Changelog:
 
 - - -
+## Unreleased (2.1.0)
+*(last updated: 2018-01-14)*
+
+### New features:
+* Toolchain / workflow improvements:
+  * Automated code formatting (Prettier);
+  * Integrated bundle hash updates (HTML Webpack Plugin);
+  * Improved dependency management (Yarn);
+   * (Travis) Node version upgrade (from 7 to 8).
+
+- - -
 ## 2.0.0 - 2017-10-02
 #### New features:
 * Enabled more parameters to be user-configurable

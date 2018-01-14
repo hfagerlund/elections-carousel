@@ -5,6 +5,8 @@ a[href^="https://"]:not([href*="hfagerlund.github.io/elections-carousel/"]):afte
 
 a:hover,a:focus,button:focus,.header-main__link:hover,.header-main__link:focus{outline:2px solid #aadd00}
 
+code{white-space:pre-wrap}
+
 main li:before,.nav-main__item--current:before,.page-toc__link:before{content:"\25b6\a0";font-size:70%;vertical-align:text-top}
 
 /* BEGIN custom color scheme */

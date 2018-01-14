@@ -45,7 +45,7 @@ $ http-server
 
 ## Features
 
-* Automatic [bundle hash updates](https://hfagerlund.github.io/elections-carousel/);
+* Automatic [bundle hash updates](https://hfagerlund.github.io/elections-carousel/developer-guide/usage/#running-the-build);
 * [Customizable](https://github.com/hfagerlund/elections-carousel#parameters);
 * Modular (UMD support);
 * [Keyboard support](https://hfagerlund.github.io/elections-carousel/developer-guide/usage/#keyboard-support).
