@@ -53,7 +53,7 @@
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "eslint-check": "./node_modules/eslint/bin/eslint.js --print-config .eslintrc | eslint-config-prettier-check",
     "format": "./node_modules/prettier/bin/prettier.js ignore-path ./.prettierignore --write '**/*.{js,jsx}'",
-    "lint:js": "./node_modules/eslint/bin/eslint.js -c .eslintrc --ext .js src/ webpack.*.js --fix",
+    "lint:js": "./node_modules/eslint/bin/eslint.js -c .eslintrc --ext .js src/ webpack.*.js --fix --quiet",
     "test": "./uncomment.sh && node_modules/.bin/tape --require ignore-styles test/**/*.test.js",
     "travis": "yarn run lint:js && yarn run test",
     "prebuild:production": "./comment-out.sh && yarn run format && yarn run lint:js"
