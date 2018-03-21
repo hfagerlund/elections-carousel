@@ -1,3 +1,7 @@
+**NOTE**: This repository is no longer maintained and has been archived. The project has been moved to a **new repository**: [elections-carousel-component](https://github.com/hfagerlund/elections-carousel-component).
+
+*******************************************************************
+
 # elections-carousel
 
 [![Build Status](https://travis-ci.org/hfagerlund/elections-carousel.svg?branch=master)](https://travis-ci.org/hfagerlund/elections-carousel)
